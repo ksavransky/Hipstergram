@@ -41,12 +41,12 @@ Hipstergram is a web application inspired by Instagram built using Ruby on Rails
 * [DB schema][schema]
 * [API endpoints][api-endpoints]
 
-[views] docs/views.md
-[components] docs/component-heirarchy.md
-[sample-state] docs/sample-state.md
-[redux-structure] docs/redux-structure.md
-[schema] docs/schema.md
-[api-endpoints] docs/api-endpoints
+[views]: docs/views.md
+[components]: docs/component-heirarchy.md
+[sample-state]: docs/sample-state.md
+[redux-structure]: docs/redux-structure.md
+[schema]: docs/schema.md
+[api-endpoints]: docs/api-endpoints
 
 # Implementation Timeline
 
