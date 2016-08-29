@@ -6,8 +6,9 @@
       full_name: "Joe Smith",
       password_digest: "asdfasdf241241",
       session_token: "asdr14534rtsafasg",
-      profile_text: "Joe is the best!"
-      prof_image_url: "http://someimage.etc"  
+      profile_text: "Joe is the best!",
+      prof_image_url: "http://someimage.etc"  ,
+      posts: [1, 3]
     },
   posts:
   {

@@ -27,7 +27,7 @@ Redux structure, you'll need to do the same.
   0. `DELETE /api/session` is called.
   0. `removeCurrentUser` is set as the success callback.
 * `fetchCurrentUser`
-  0. invoked from `App` in `didMount`
+  0. invoked from `App` in `onEnter`
   0. `GET /api/session` is called.
   0. `receiveCurrentUser` is set as the success callback.
 
@@ -89,7 +89,7 @@ Redux structure, you'll need to do the same.
   0. invoked from an API callback.
   0. The `Post` reducer updates `posts[id]` in the application's state.
 
-* `removeNotebook`
+* `removePost`
   0. invoked from an API callback.
   0. The `Post` reducer removes `posts[id]` from the application's state.
 
@@ -194,3 +194,34 @@ Redux structure, you'll need to do the same.
 * `removeRelationship`
   0. invoked from an API callback.
   0. The `Relationship` reducer removes `relationships[id]` from the application's state.
+
+## Containers and Props
+
+### Posts Container Props
+  * `state.posts`
+  * `requestPosts`
+  * `fetchSinglePost`
+  * `fetchAllComments`
+  * `fetchAllLikes`
+
+### PostListItem Container Props
+  * `state.posts`
+  * `updatePost`
+  * `destroyPost`
+  * `createComment`
+  * `destroyComment`
+  * `createLike`
+  * `destroyLike`
+
+### Upload Post Form Container Props
+  * `createPost`
+
+### Suggestions Component
+  * `fetchAllRelationships`
+  * `createRelationship`
+  * `destroyRelationship`
+
+### UserProfile
+  * `fetchAllRelationships`
+  * `createRelationship`
+  * `destroyRelationship`
