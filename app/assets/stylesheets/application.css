@@ -135,3 +135,17 @@ h1, h5 {
   text-decoration: none;
   color: black;
 }
+
+#background-video{
+z-index:-1;
+/*background-position:center;
+float: left;*/
+display: flex;
+justify-content: center;
+height: 100%;
+width: 100%;
+top: 0;
+padding: none;
+position: fixed; // optional depending on what you want
+
+}
