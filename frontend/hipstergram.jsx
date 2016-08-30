@@ -11,10 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
     const initialState = {session: {currentUser: window.currentUser}};
-    store = configureStore(initialState);
+    store = window.Store = configureStore(initialState);
   } else {
-    store = configureStore();
+    store = window.Store = configureStore();
   }
+
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);

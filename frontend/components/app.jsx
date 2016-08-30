@@ -3,7 +3,8 @@ import React from 'react';
 
 const App = () => (
   <div className="app">
-    <h1>What a cool App!</h1>
+    <h1>Hipstergram! Coming soon!</h1>
+
   </div>
 );
 
