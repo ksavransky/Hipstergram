@@ -20,7 +20,10 @@
   height: 100%;
 }
 
-
+.welcome-div {
+  display: flex;
+  justify-content: center;
+}
 
 
 .user-pane {
@@ -89,6 +92,11 @@ h1, h5 {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.signup-login-link{
+  float: left;
+  justify-content: center;
 }
 
 .login-form-container {
