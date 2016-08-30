@@ -35,13 +35,13 @@ class SessionForm extends React.Component {
 		if (this.props.formType === "login") {
 			return (
 				<div>
-				Don't have an account?
+				Do not have an account? &nbsp;
 				<Link to="/signup">Sign Up</Link>
 				</div>);
 		} else {
 			return (
 				<div>
-				Have an account?
+				Have an account? &nbsp;
 				<Link to="/login">Log In</Link>
 				</div>);
 		}
@@ -73,7 +73,8 @@ class SessionForm extends React.Component {
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					<div className="welcome-div"> Welcome to Hipstergram! </div>
+					<div className="welcome-div"> Hipstergram! </div>
+					<div className="welcome-div-bottom"> Share photos with the cool kids. </div>
 					{ this.renderErrors() }
 					<div className="login-form">
 						<br />
