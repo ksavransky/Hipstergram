@@ -64,13 +64,13 @@ class SessionForm extends React.Component {
 	navLink(){
 		if (this.props.formType === "login") {
 			return (
-				<div>
-				Do not have an account? &nbsp;
+				<div className="login-sign-up-switch">
+				Don't have an account? &nbsp;
 				<Link to="/signup" className="login-link">Sign Up</Link>
 				</div>);
 		} else {
 			return (
-				<div>
+				<div className="login-sign-up-switch">
 				Have an account? &nbsp;
 				<Link to="/login" className="login-link">Log In</Link>
 				</div>);
@@ -103,7 +103,7 @@ class SessionForm extends React.Component {
 
 
 		let GuestButton = (this.props.formType === "login") ?
-		<button className="login-buttons demo-button"
+		<button className="login-buttons"
 			onClick={(e) => this.demoLogin(e, "Guest", "password")}>Guest</button> : "";
 
 
@@ -138,7 +138,7 @@ class SessionForm extends React.Component {
 						<br />
 						<div className="login-button-box">
 							<input type="submit"
-								className="login-buttons login-button"
+								className="login-buttons"
 								value={this.submitButtonText()} />
 							{GuestButton}
 						</div>
