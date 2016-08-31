@@ -109,8 +109,8 @@ class SessionForm extends React.Component {
 
 		return (
 			<div className="login-form-container">
-				<video id="background-video" loop autoPlay>
-						<source src="http://res.cloudinary.com/ksavransky/video/upload/v1472596919/Coffee-Shot_s2c19r.mp4" type="video/mp4"/>
+				<video id="background-video" muted loop autoPlay>
+						<source src="http://res.cloudinary.com/ksavransky/video/upload/v1472622294/hipsterlife_ntkbvi.mp4" type="video/mp4"/>
 					</video>
 				<form onSubmit={this.handleSubmit} className="login-form-box">
 					<div className="welcome-div"> Hipstergram! </div>
