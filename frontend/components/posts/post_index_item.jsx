@@ -10,7 +10,7 @@ class PostIndexItem extends React.Component {
 
   handleClick() {
     const postID = this.props.post.id;
-    hashHistory.push("benches/" + postID );
+    hashHistory.push("posts/" + postID );
   }
 
   render() {

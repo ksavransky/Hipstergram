@@ -7,8 +7,9 @@ const App = ({children}) => (
   <div>
     <header>
       <Link to="/" className="header-link"><h1>Hipstergram</h1></Link>
-      <PostIndexContainer />
+      <GreetingContainer />
     </header>
+    <PostIndexContainer />
     {children}
   </div>
 );

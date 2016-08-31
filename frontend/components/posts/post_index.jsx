@@ -8,13 +8,10 @@ class PostIndex extends React.Component {
 
   render() {
     let { posts } = this.props;
-
-    if(!posts){
-      posts = [];
-    }
-
     const postKeys = Object.keys(posts);
     return(
+
+
       <div>
         <ul className="post-list">
           {postKeys.map(key => <PostIndexItem
