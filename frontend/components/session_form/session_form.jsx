@@ -66,13 +66,13 @@ class SessionForm extends React.Component {
 			return (
 				<div>
 				Do not have an account? &nbsp;
-				<Link to="/signup">Sign Up</Link>
+				<Link to="/signup" className="login-link">Sign Up</Link>
 				</div>);
 		} else {
 			return (
 				<div>
 				Have an account? &nbsp;
-				<Link to="/login">Log In</Link>
+				<Link to="/login" className="login-link">Log In</Link>
 				</div>);
 		}
 	}
@@ -127,7 +127,7 @@ class SessionForm extends React.Component {
 						</label>
 
 						<br />
-						<label> Password:
+						<label> Password:&nbsp;
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
