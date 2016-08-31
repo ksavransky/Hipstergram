@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
 				clearInterval(typing);
 				callback();
 			}
-		}, 50);
+		}, 20);
 	}
 
 	demoLogin(e, username, password) {
@@ -65,13 +65,13 @@ class SessionForm extends React.Component {
 		if (this.props.formType === "login") {
 			return (
 				<div className="login-sign-up-switch">
-				Don't have an account? &nbsp;
+				You want to be cool, right? &nbsp;
 				<Link to="/signup" className="login-link">Sign Up</Link>
 				</div>);
 		} else {
 			return (
 				<div className="login-sign-up-switch">
-				Have an account? &nbsp;
+				Of course I have an account! &nbsp;
 				<Link to="/login" className="login-link">Log In</Link>
 				</div>);
 		}
@@ -103,8 +103,10 @@ class SessionForm extends React.Component {
 
 
 		let GuestButton = (this.props.formType === "login") ?
-		<button className="login-buttons"
-			onClick={(e) => this.demoLogin(e, "Guest", "password")}>Guest</button> : "";
+		<button className="login-button-guest"
+			onClick={(e) => this.demoLogin(e, "Guest", "password")}>
+			Guest
+		</button> : "";
 
 
 		return (
@@ -138,7 +140,7 @@ class SessionForm extends React.Component {
 						<br />
 						<div className="login-button-box">
 							<input type="submit"
-								className="login-buttons"
+								className="login-button"
 								value={this.submitButtonText()} />
 							{GuestButton}
 						</div>

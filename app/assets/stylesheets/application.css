@@ -18,7 +18,15 @@
   margin-top: 10px;
 }
 
-.login-buttons{
+.login-button{
+  display: flex;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.login-button-guest{
   display: flex;
   background-color: cornflowerblue;
   color: white;
@@ -66,9 +74,6 @@ header {
 h1, h5 {
   margin-bottom: 0px;
 }
-
-
-
 
 .button-holder {
   display: flex;
