@@ -30,6 +30,10 @@ class AppRouter extends React.Component{
     }
   }
 
+  componentDidMount(){
+    $.ajax({ url: '/api/posts', method: 'Get', success: (data) => console.log(data)});
+  }
+
   render(){
     return(
       <Router history={ hashHistory }>
