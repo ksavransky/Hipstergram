@@ -9,6 +9,36 @@ class SessionForm extends React.Component {
 			password: ""
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
+
+		this.animeType = this.animeType.bind(this);
+		this.demoLogin = this.demoLogin.bind(this);
+	}
+
+	animeType($el, word, callback){
+
+		var typing = setInterval(function(){
+			$el.val( $el.val() + word.slice(0,1) );
+			word = word.substr(1);
+
+			if (!word){
+				clearInterval(typing);
+				callback();
+			}
+		}, 50);
+	}
+
+	demoLogin(e, username, password) {
+		e.preventDefault();
+		let $username = $('.username');
+		let $password = $('.password');
+		let $submitButton = $('.login-button');
+		let that = this;
+		this.animeType($username, username, () => {
+			this.animeType($password, password, ()=> {
+				that.setState({username, password });
+				$submitButton.click();
+			});
+		});
 	}
 
 	componentDidUpdate(){
@@ -70,8 +100,14 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
-		return (
 
+
+		let GuestButton = (this.props.formType === "login") ?
+		<button className="login-buttons demo-button"
+			onClick={(e) => this.demoLogin(e, "Guest", "password")}>Guest</button> : "";
+
+
+		return (
 			<div className="login-form-container">
 				<video id="background-video" loop autoPlay>
 						<source src="http://res.cloudinary.com/ksavransky/video/upload/v1472596919/Coffee-Shot_s2c19r.mp4" type="video/mp4"/>
@@ -86,7 +122,8 @@ class SessionForm extends React.Component {
 							<input type="text"
 								value={this.state.username}
 								onChange={this.update("username")}
-								className="login-input" />
+								className="login-input"
+								placeholder="Username"/>
 						</label>
 
 						<br />
@@ -94,11 +131,17 @@ class SessionForm extends React.Component {
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
-								className="login-input" />
+								className="login-input"
+								placeholder="Password"  />
 						</label>
 
 						<br />
-						<input type="submit" value={this.submitButtonText()} />
+						<div className="login-button-box">
+							<input type="submit"
+								className="login-buttons login-button"
+								value={this.submitButtonText()} />
+							{GuestButton}
+						</div>
 						<br />
 						<div className="signup-login-link">
 							{ this.navLink() }
