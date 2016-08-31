@@ -76,9 +76,9 @@ Hipstergram is a web application inspired by Instagram built using Ruby on Rails
 - [ ] jBuilder views for posts
 - [ ] test out API interaction in the console.
 - implement each post component, building out the redux loop as needed.
-  - [ ] `PostsIndex`
+  - [ ] `PostsIndex`  
   - [ ] `PostIndexItem`
-  - [ ] `PostForm`
+  - [ ] `PostForm`  -- this is to create new posts
 - [ ] save Posts to the DB when the form is submitted.
 - [ ] style posts components
 - [ ] seed posts

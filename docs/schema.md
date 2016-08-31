@@ -16,8 +16,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 image_url   | string    | not null
-caption     | text      | not null
-post_date   | string    | not null
+caption     | text      | 
 user_id     | integer   | not null, foreign key (references users), indexed
 
 ## relationships

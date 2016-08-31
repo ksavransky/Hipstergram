@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 	validates :username, uniqueness: true
 	validates :password, length: {minimum: 2}, allow_nil: :true
 
+	has_many :posts
+
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness
 
