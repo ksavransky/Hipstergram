@@ -6,6 +6,9 @@ import Root from './components/root';
 //Actions
 import configureStore from './store/store';
 
+import Modal from 'react-modal';
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = window.Store = configureStore();
   }
 
+  Modal.setAppElement(document.body);
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
