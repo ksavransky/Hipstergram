@@ -29,7 +29,7 @@ class PostIndexItem extends React.Component {
                   date here
                 </span>
         </div>
-        <img src={post.image_url}/>
+        <img src={post.image_url} className="post-image"/>
         <span className="post-item-caption">
           {post.caption}
         </span>

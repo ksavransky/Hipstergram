@@ -1,6 +1,17 @@
  body {
-   font-family: 'Abel', sans-serif;
+   font-family: 'Roboto','proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
  }
+
+header {
+  margin-left: 5%;
+  font-family: 'Roboto','proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+h1, h5 {
+  margin-bottom: 0px;
+  font-family: 'Roboto','proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
 
 .content {
   height: 100%;
@@ -67,14 +78,6 @@
   margin-top: 20px;
 }
 
-
-header {
-  margin-left: 5%;
-}
-
-h1, h5 {
-  margin-bottom: 0px;
-}
 
 .button-holder {
   display: flex;
@@ -153,5 +156,39 @@ width: 100%;
 top: 0;
 padding: none;
 position: fixed; // optional depending on what you want
+}
 
+.post-index{
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.post-index-ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.post-index-item{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.post-item-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.post-item-caption{
+  display: flex;
+  padding: 10px;
+}
+
+.post-image{
+  display: flex;
+  height: 300px;
+  width: auto;
+  padding: 10px;
 }
