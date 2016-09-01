@@ -5,13 +5,9 @@ import { hashHistory } from 'react-router';
 class PostShowItem extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
     this.timeSincePost = this.timeSincePost.bind(this);
   }
 
-  handleClick() {
-    hashHistory.push("posts/");
-  }
 
   timeSincePost(createdAt){
     let currentTime = new Date();
@@ -22,9 +18,6 @@ class PostShowItem extends React.Component {
     let currentYear = currentTime.getUTCFullYear();
 
     let dateResult = createdAt;
-
-
-
     return dateResult;
 
   }
@@ -32,8 +25,7 @@ class PostShowItem extends React.Component {
   render() {
     const post = this.props.post;
     return (
-      <div className="post-show-item"
-           onClick={this.handleClick}>
+      <div className="post-show-item">
         <div className="post-show-header">
                 <span className="post-show-user-photo">
                   <img src={post.user.prof_image_url} className="post-profile-image"/>

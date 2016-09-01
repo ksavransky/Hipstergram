@@ -1,6 +1,8 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
 import Modal from 'react-modal';
+import PostShowContainer from './post_show_container.jsx';
+import PostShowItem from './post_show.jsx';
 
 
 class PostIndexItem extends React.Component {
@@ -28,6 +30,7 @@ class PostIndexItem extends React.Component {
           bottom          : '100px',
           border          : '1px solid #ccc',
           padding         : '20px',
+          backgroundColor : "red",
 
       }
     };
@@ -88,9 +91,7 @@ class PostIndexItem extends React.Component {
          >
 
            <h2>Im a modal!</h2>
-           <p>modal modal modal modal modal</p>
-           <p>mooooooooodal!</p>
-
+           <PostShowItem post={post}/>
        </Modal>
       </div>
     );
