@@ -1,0 +1,28 @@
+import Modal from 'react-modal';
+
+npm install
+
+in constructor
+this.state ={
+
+
+}
+
+
+closeModal(){
+this.msetState(true)
+}
+
+openModal()
+
+in render
+
+onClick=this.openModal
+
+in render
+
+Modal is Open={this.state.moda)}
+
+in entry file
+
+Modal.setAppElement(document.body);
