@@ -20,10 +20,10 @@ class PostIndexItem extends React.Component {
            onClick={this.handleClick}>
         <div className="post-item-header">
                 <span className="post-item-user-photo">
-                  Photo goes here
+                  <img src={post.user.prof_image_url} className="post-profile-image"/>
                 </span>
                 <span className="post-item-user-name">
-                  User name goes here
+                  {post.user.username}
                 </span>
                 <span className="post-item-date">
                   date here
