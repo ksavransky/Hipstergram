@@ -17,14 +17,17 @@ class SessionForm extends React.Component {
 	animeType($el, word, callback){
 
 		var typing = setInterval(function(){
+
 			$el.val( $el.val() + word.slice(0,1) );
+
 			word = word.substr(1);
+
 
 			if (!word){
 				clearInterval(typing);
 				callback();
 			}
-		}, 20);
+		}, 50);
 	}
 
 	demoLogin(e, username, password) {
@@ -89,7 +92,7 @@ class SessionForm extends React.Component {
 
 	renderErrors(){
 		return(
-			<ul>
+			<ul className= "login-errors">
 				{this.props.errors.map( (error, i) => (
 					<li key={`error-${i}`}>
 						{error}
@@ -119,7 +122,6 @@ class SessionForm extends React.Component {
 					<div className="welcome-div-bottom"> Share photos with the cool kids. </div>
 					{ this.renderErrors() }
 					<div className="login-form">
-						<br />
 						<label> Username:
 							<input type="text"
 								value={this.state.username}
