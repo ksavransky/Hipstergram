@@ -1,4 +1,4 @@
-json.extract! post, :id, :image_url, :caption, :user_id
+json.extract! post, :id, :image_url, :caption, :user_id, :created_at
 
 json.user do
   json.username post.user.username

@@ -6,11 +6,28 @@ class PostIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.timeSincePost = this.timeSincePost.bind(this);
   }
 
   handleClick() {
     const postID = this.props.post.id;
     hashHistory.push("posts/" + postID );
+  }
+
+  timeSincePost(createdAt){
+    let currentTime = new Date();
+    let currentMinutes = currentTime.getUTCMinutes();
+    let currentHours = currentTime.getUTCHours();
+    let currentDate = currentTime.getUTCDate();
+    let currentMonth = currentTime.getUTCMonth();
+    let currentYear = currentTime.getUTCFullYear();
+
+    let dateResult = createdAt;
+
+
+
+    return dateResult;
+
   }
 
   render() {
@@ -26,7 +43,7 @@ class PostIndexItem extends React.Component {
                   {post.user.username}
                 </span>
                 <span className="post-item-date">
-                  date here
+                  {this.timeSincePost(post.created_at)}
                 </span>
         </div>
         <img src={post.image_url} className="post-image"/>
