@@ -89,9 +89,7 @@ class PostIndexItem extends React.Component {
          onRequestClose={this.closeModal}
          style={this.style}
          >
-
-           <h2>Im a modal!</h2>
-           <PostShowItem post={post}/>
+           <PostShowContainer post={post}/>
        </Modal>
       </div>
     );
