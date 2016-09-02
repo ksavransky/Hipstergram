@@ -22,7 +22,10 @@ class PostIndexItem extends React.Component {
           backgroundColor : 'rgba(255, 255, 255, 0.75)',
         },
         content : {
-          display         : "flex",
+          display         : "block",
+          width           : "600px",
+          margin          : "auto",
+
           // position        : 'fixed',
           // top             : '75px',
           // left            : '75px',
