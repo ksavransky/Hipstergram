@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, hashHistory, withRouter } from 'react-router';
 import Modal from 'react-modal';
+import UploadFormContainer from '../../components/upload_form/upload_form_container.js'
 
 
 class Navbar extends React.Component {
@@ -23,18 +24,11 @@ class Navbar extends React.Component {
         },
         content : {
           display         : "block",
-          width           : "600px",
+          width           : "800px",
           margin          : "auto",
-
-          // position        : 'fixed',
-          // top             : '75px',
-          // left            : '75px',
-          // right           : '10x',
-          // bottom          : '10px',
           border          : '1px solid #ccc',
           padding         : '1px',
           backgroundColor : "#c5d5da",
-
       }
     };
   }
@@ -86,7 +80,7 @@ class Navbar extends React.Component {
            onRequestClose={this.closeModal}
            style={this.style}
            >
-             <h2>WOW A MODEL</h2>
+             <UploadFormContainer/>
          </Modal>
       </div>
     );
