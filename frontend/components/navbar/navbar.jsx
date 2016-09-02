@@ -30,9 +30,7 @@ class Navbar extends React.Component {
           <span className="navbar-user-name">
             Hi, {currentUser.username}!
           </span>
-          <span className="navbar-logout">
-            <button className="navbar-logout-button" onClick={logout}>Log Out</button>
-          </span>
+          <button className="navbar-logout-button" onClick={logout}>Log Out</button>
       </div>
     );
   }

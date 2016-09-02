@@ -250,3 +250,38 @@ position: fixed; // optional depending on what you want
   border-radius:50%;
   padding: 10px;
 }
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.navbar-logo{
+  display: flex;
+}
+
+.navbar-text{
+  display: flex;
+  font-family: 'Clicker Script', 'Roboto','proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.navbar-search-container{
+  display: flex;
+}
+
+.navbar-photo-upload{
+  display: flex;
+}
+
+.navbar-user-photo{
+  display: flex;
+}
+
+.navbar-user-name{
+  display: flex;
+}
+
+.navbar-logout-button{
+  display: flex;
+}
