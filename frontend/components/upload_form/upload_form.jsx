@@ -15,7 +15,7 @@ class UploadForm extends React.Component {
 	}
 
   setURL(url){
-    this.state.image_url = url;
+    this.setState({image_url: url});
   }
 
   uploadImage(e) {
@@ -26,7 +26,6 @@ class UploadForm extends React.Component {
         that.setURL(results[0].secure_url);
       }
     });
-
   }
 
 	update(field){
@@ -37,6 +36,8 @@ class UploadForm extends React.Component {
 		e.preventDefault();
 		const post = this.state;
 		this.props.createPost({post});
+    this.setState({image_url: ""});
+    this.setState({caption: ""});
 	}
 
 
@@ -58,6 +59,10 @@ class UploadForm extends React.Component {
 						<label> Upload Photo:&nbsp;
               <button className="upload-image-button" onClick={this.uploadImage}>Upload Photo</button>
 						</label>
+
+            <div className="upload-form-image-box">
+              <img src={this.state.image_url} className="upload-form-image"/>
+            </div>
 
 						<br />
 						<div className="upload-form-button-box">
