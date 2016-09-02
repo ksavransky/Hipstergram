@@ -28,7 +28,7 @@ class PostShowItem extends React.Component {
       <div className="post-show-item">
         <div className="post-show-header">
                 <span className="post-show-user-photo">
-                  <img src={post.user.prof_image_url} className="post-profile-image"/>
+                  <img src={post.user.prof_image_url} className="post-profile-show-image"/>
                 </span>
                 <span className="post-show-user-name">
                   {post.user.username}

@@ -5,6 +5,7 @@ import { requestPost, removePost, updatePost } from '../../actions/post_actions'
 
 
 const mapStateToProps = (state, ownProps) => ({
+  currentUser: state.session.currentUser,
   post: ownProps.post,
 });
 
