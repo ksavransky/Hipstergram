@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, hashHistory } from 'react-router';
+import { Link, hashHistory, withRouter } from 'react-router';
 
 class UploadForm extends React.Component {
 	constructor(props){
@@ -36,7 +36,6 @@ class UploadForm extends React.Component {
 	handleSubmit(e){
 		e.preventDefault();
 		const post = this.state;
-    console.log(post);
 		this.props.createPost({post});
 	}
 
@@ -74,4 +73,4 @@ class UploadForm extends React.Component {
 
 }
 
-export default UploadForm;
+export default withRouter(UploadForm);

@@ -82,6 +82,7 @@ class Navbar extends React.Component {
            style={this.style}
            >
              <UploadFormContainer/>
+             <button className="navbar-closemodal-button"onClick={this.closeModal}>Done Posting!</button>
          </Modal>
       </div>
     );

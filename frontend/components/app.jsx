@@ -8,8 +8,8 @@ const App = ({children}) => (
     <header>
       <NavBar />
     </header>
-    <PostIndexContainer />
-    {children}
+      <PostIndexContainer />
+      {children}
   </div>
 );
 
