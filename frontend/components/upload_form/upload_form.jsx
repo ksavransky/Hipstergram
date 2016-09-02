@@ -68,6 +68,7 @@ class UploadForm extends React.Component {
 						<div className="upload-form-button-box">
 							<input type="submit"
 								className="upload-form-button"
+                disabled={(this.state.image_url === "")}
 								value="Create New Post"/>
 						</div>
 					</div>
