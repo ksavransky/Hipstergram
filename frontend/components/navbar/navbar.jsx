@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, hashHistory, withRouter } from 'react-router';
+import Modal from 'react-modal';
 
 
 class Navbar extends React.Component {
@@ -8,6 +9,42 @@ class Navbar extends React.Component {
     this.logout = this.props.logout;
     this.redirectToLoggedIn = this.redirectToLoggedIn.bind(this);
 
+    this.state = {modalOpen: false};
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.style = {
+        overlay : {
+          position        : 'fixed',
+          top             : 0,
+          left            : 0,
+          right           : 0,
+          bottom          : 0,
+          backgroundColor : 'rgba(255, 255, 255, 0.75)',
+        },
+        content : {
+          display         : "block",
+          width           : "600px",
+          margin          : "auto",
+
+          // position        : 'fixed',
+          // top             : '75px',
+          // left            : '75px',
+          // right           : '10x',
+          // bottom          : '10px',
+          border          : '1px solid #ccc',
+          padding         : '1px',
+          backgroundColor : "#c5d5da",
+
+      }
+    };
+  }
+
+  closeModal(){
+    this.setState({ modalOpen: false });
+  }
+
+  openModal(){
+    this.setState({ modalOpen: true });
   }
 
   redirectToLoggedIn(){
@@ -34,7 +71,7 @@ class Navbar extends React.Component {
           <span className="navbar-search-container">
             Search here
           </span>
-          <span className="navbar-photo-upload">
+          <span className="navbar-photo-upload" onClick={this.openModal}>
             Photo upload here
           </span>
           <span className="navbar-user-photo">
@@ -44,6 +81,13 @@ class Navbar extends React.Component {
             Hi, {currentUser.username}!
           </span>
           <button className="navbar-logout-button" onClick={this.redirectToLoggedIn}>Log Out</button>
+          <Modal
+           isOpen={this.state.modalOpen}
+           onRequestClose={this.closeModal}
+           style={this.style}
+           >
+             <h2>WOW A MODEL</h2>
+         </Modal>
       </div>
     );
   }
