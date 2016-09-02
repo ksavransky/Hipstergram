@@ -14,9 +14,6 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.user_id = current_user.id
-    # is this the right way to assign the id?
-
     if(@post.save)
       render "api/posts/show", status: 200
       # sends jbuilder info back for specific post to ajax success
@@ -49,6 +46,6 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:image_url, :caption)
+    params.require(:post).permit(:image_url, :caption, :user_id)
   end
 end

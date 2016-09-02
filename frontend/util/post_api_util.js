@@ -15,13 +15,12 @@ export const fetchPost = function(id, success){
 };
 
 // not sure I need error param here; see dif between benchbnb and todo; check poke
-export const createPost = function(post, success, error){
+export const createPost = function(post, success){
   $.ajax({
     method: 'POST',
     url: 'api/posts',
     data: post,
-    success,
-    error
+    success
   });
 };
 

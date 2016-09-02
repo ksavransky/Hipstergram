@@ -1,5 +1,6 @@
 import { fetchPosts,
-         fetchPost
+         fetchPost,
+         createPost
        } from '../util/post_api_util';
 
 import { requestPosts,
@@ -19,6 +20,9 @@ export default ({getState, dispatch}) => next => action => {
      break;
    case PostConstants.REQUEST_POST:
      fetchPost(action.id, postSuccess);
+     break;
+    case PostConstants.CREATE_POST:
+     createPost(action.post, postSuccess);
      break;
    default:
      next(action);

@@ -5,14 +5,29 @@ class UploadForm extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			user_id: this.props.currentUser.id,
-			caption: "",
-      image_url: ""
+      image_url: "",
+      caption: "",
+			user_id: this.props.currentUser.id
 		};
-
 		this.handleSubmit = this.handleSubmit.bind(this);
+    this.uploadImage = this.uploadImage.bind(this);
+    this.setURL = this.setURL.bind(this);
 	}
 
+  setURL(url){
+    this.state.image_url = url;
+  }
+
+  uploadImage(e) {
+    const that = this;
+    e.preventDefault();
+      cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, results){
+      if(!error){
+        that.setURL(results[0].secure_url);
+      }
+    });
+
+  }
 
 	update(field){
 		return e => { this.setState({[field]: e.currentTarget.value }); };
@@ -21,6 +36,7 @@ class UploadForm extends React.Component {
 	handleSubmit(e){
 		e.preventDefault();
 		const post = this.state;
+    console.log(post);
 		this.props.createPost({post});
 	}
 
@@ -41,7 +57,7 @@ class UploadForm extends React.Component {
 
 						<br />
 						<label> Upload Photo:&nbsp;
-
+              <button className="upload-image-button" onClick={this.uploadImage}>Upload Photo</button>
 						</label>
 
 						<br />
