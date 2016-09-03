@@ -46,24 +46,16 @@ class UploadForm extends React.Component {
 		let submitButton;
 		let caption;
 
-		if(this.state.image_url === ""){
-			submitButton = <input type="submit"
-					className="upload-form-button-disabled"
-					disabled={true}
-					value=""/>;
-				caption = <input type="text"
-						value={this.state.caption}
-						className="upload-caption-input-disabled"/>;
-			} else {
+		if(this.state.image_url !== ""){
 				submitButton = <input type="submit"
-						className="upload-form-button-enabled"
+						className="upload-form-button"
 						disabled={false}
 						value="Create New Post"/>;
-					caption = <div className="upload-caption-box-enabled"> Caption: &nbsp;
+					caption = <div className="upload-caption-box"> Caption: &nbsp;
 						<input type="text"
 						value={this.state.caption}
 						onChange={this.update("caption")}
-						className="upload-caption-input-enabled"
+						className="upload-caption-input"
 						placeholder="Photo Caption"/>
 					</div>;
 			}

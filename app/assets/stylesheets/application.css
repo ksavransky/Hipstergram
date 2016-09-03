@@ -292,17 +292,12 @@ position: fixed; // optional depending on what you want
   flex-direction: column;
 }
 
-.upload-caption-input-enabled{
+.upload-caption-input{
   display: flex;
 }
 
-.upload-caption-input-disabled{
-  display: flex;
-  visibility: hidden;
-  display: none;
-}
 
-.upload-caption-box-enabled{
+.upload-caption-box{
   display: flex;
   flex-direction: row;
 }
@@ -335,12 +330,7 @@ position: fixed; // optional depending on what you want
   display: flex;
 }
 
-.upload-form-button-disabled{
-  display: flex;
-  visibility: hidden;
-}
-
-.upload-form-button-enabled{
+.upload-form-button{
   display: flex;
   background-color: cornflowerblue;
   color: white;
