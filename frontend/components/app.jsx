@@ -8,9 +8,9 @@ const App = ({children}) => (
     <header>
       <NavBar />
     </header>
-      <PostIndexContainer />
       {children}
   </div>
 );
+
 
 export default App;

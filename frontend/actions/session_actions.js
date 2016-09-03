@@ -3,8 +3,14 @@ export const SessionConstants = {
   LOGOUT: "LOGOUT",
   SIGNUP: "SIGNUP",
   RECEIVE_CURRENT_USER: "RECEIVE_CURRENT_USER",
-  RECEIVE_ERRORS: "RECEIVE_ERRORS"
+  RECEIVE_ERRORS: "RECEIVE_ERRORS",
+  UPDATE_USER: "UPDATE_USER"
 };
+
+export const updateUser = user => ({
+  type: SessionConstants.UPDATE_USER,
+  user
+});
 
 export const signup = user => ({
   type: SessionConstants.SIGNUP,

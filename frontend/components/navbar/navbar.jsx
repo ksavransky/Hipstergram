@@ -9,6 +9,8 @@ class Navbar extends React.Component {
     super(props);
     this.logout = this.props.logout;
     this.redirectToLoggedIn = this.redirectToLoggedIn.bind(this);
+    this.redirectToProfile = this.redirectToProfile.bind(this);
+
 
     this.state = {modalOpen: false};
     this.closeModal = this.closeModal.bind(this);
@@ -52,6 +54,10 @@ class Navbar extends React.Component {
     }
   }
 
+  redirectToProfile(){
+    this.props.router.replace("/profile");
+  }
+
   render() {
     const currentUser = this.props.currentUser;
     const logout = this.props.logout;
@@ -69,7 +75,7 @@ class Navbar extends React.Component {
           <span className="navbar-photo-upload" onClick={this.openModal}>
             Photo upload here
           </span>
-          <span className="navbar-user-photo">
+          <span className="navbar-user-photo" onClick={this.redirectToProfile}>
             User photo
           </span>
           <span className="navbar-user-name">

@@ -3,10 +3,20 @@ import { receiveCurrentUser,
          SessionConstants
        } from '../actions/session_actions';
 
-import { login, signup, logout } from '../util/session_api_util';
+import {hashHistory} from 'react-router';
+
+import { login, signup, logout, updateUser } from '../util/session_api_util';
 
 export default ({getState, dispatch}) => next => action => {
-  const successCallback = user => dispatch(receiveCurrentUser(user));
+  const successCallback = user => {
+    dispatch(receiveCurrentUser(user));
+    hashHistory.replace('/posts');
+  };
+
+  const updateCallback = user => {
+    dispatch(receiveCurrentUser(user));
+  };
+
   const errorCallback = xhr => {
     const errors = xhr.responseJSON;
     dispatch(receiveErrors(errors));
@@ -22,6 +32,9 @@ export default ({getState, dispatch}) => next => action => {
     case SessionConstants.SIGNUP:
       signup(action.user, successCallback, errorCallback);
       return next(action);
+      break;
+    case SessionConstants.UPDATE_USER:
+      updateUser(action.user, updateCallback);
       break;
     default:
       return next(action);
