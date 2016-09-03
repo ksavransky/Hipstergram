@@ -275,7 +275,7 @@ position: fixed; // optional depending on what you want
 
 .upload-form-container{
   display: flex;
-
+  justify-content: center;
 }
 
 .upload-form-box{
@@ -285,7 +285,11 @@ position: fixed; // optional depending on what you want
 
 .upload-form-welcome{
   display: flex;
-  padding: 5px;
+  padding: 10px;
+  justify-content: center;
+  font-family: 'Roboto';
+  font-size: 22px;
+
 }
 
 .upload-form{

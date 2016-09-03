@@ -50,21 +50,21 @@ class UploadForm extends React.Component {
 				submitButton = <input type="submit"
 						className="upload-form-button"
 						disabled={false}
-						value="Create New Post"/>;
-					
+						value="Create Post"/>;
+
 					caption = <div className="upload-caption-box"> Caption: &nbsp;
 						<input type="text"
 						value={this.state.caption}
 						onChange={this.update("caption")}
 						className="upload-caption-input"
-						placeholder="Photo Caption"/>
+						placeholder="Post Caption"/>
 					</div>;
 			}
 
 		return (
 			<div className="upload-form-container">
 				<form onSubmit={this.handleSubmit} className="upload-form-box">
-					<div className="upload-form-welcome"> Post A New Photo: </div>
+					<div className="upload-form-welcome"> Create A New Post! </div>
 
 					<div className="upload-form">
 						<label>
