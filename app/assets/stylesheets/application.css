@@ -179,13 +179,13 @@ position: fixed; // optional depending on what you want
 
 .post-item-user-name{
   display: flex;
-  padding-top: 17px;
-  margin-right: 370px;
+  margin-right: auto;
+  padding-top: 20px;
 }
 
 .post-item-date{
   display: flex;
-  padding: 17px;
+  padding: 20px;
   color: grey;
 }
 
