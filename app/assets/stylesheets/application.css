@@ -63,21 +63,6 @@ h1, h5 {
   justify-content: center;
 }
 
-.right-half {
-  width: 400px;
-  margin-left: 50px;
-  margin-top: 40px;
-  height: 480px;
-  overflow-y: scroll;
-  padding: 0 20px 20px 20px;
-}
-
-.right-half.bench-details {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
 
 .button-holder {
   display: flex;
@@ -295,6 +280,7 @@ position: fixed; // optional depending on what you want
 
 .upload-form-box{
   display: flex;
+  flex-direction: column;
 }
 
 .upload-form-welcome{
@@ -303,6 +289,7 @@ position: fixed; // optional depending on what you want
 
 .upload-form{
   display: flex;
+  flex-direction: column;
 }
 
 .upload-caption-input{
@@ -311,27 +298,53 @@ position: fixed; // optional depending on what you want
 
 .upload-image-button{
   display: flex;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
 }
 
 .upload-form-image-box{
   display: flex;
-  border: 2px solid black;
+  border: 1px solid grey;
+  border-radius: 10px;
   height: 300px;
   width: 300px;
 }
 
 .upload-form-image{
   display: flex;
+  height: 299px;
+  width: 299px;
 }
 
 .upload-form-button-box{
   display: flex;
 }
 
-.upload-form-button{
+.upload-form-button-disabled{
   display: flex;
+  background-color: grey;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
 }
+
+.upload-form-button-enabled{
+  display: flex;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+
+
 
 .navbar-closemodal-button{
   display: flex;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
 }

@@ -12,6 +12,7 @@ class Navbar extends React.Component {
     this.redirectToProfile = this.redirectToProfile.bind(this);
 
 
+
     this.state = {modalOpen: false};
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -25,14 +26,16 @@ class Navbar extends React.Component {
           backgroundColor : 'rgba(255, 255, 255, 0.75)',
         },
         content : {
-          display         : "block",
-          width           : "700px",
-          height          : "500px",
-          "margin-left"   : "270px",
-          position        : "relative",
-          border          : '1px solid #ccc',
-          padding         : '1px',
-          backgroundColor : "#c5d5da",
+          display            : "block",
+          width              : "700px",
+          height             : "500px",
+          "margin"           : "auto",
+          position           : "relative",
+          border             : '2px solid grey',
+          "border-radius"    : "10px",
+          "padding-right"    : '1px',
+          "background-color" : "aliceblue",
+          "font-family"      : "Roboto, proxima-nova, Helvetica Neue, Arial"
       }
     };
   }
