@@ -285,3 +285,53 @@ position: fixed; // optional depending on what you want
 .navbar-logout-button{
   display: flex;
 }
+
+/*UPLOAD FORM*/
+
+.upload-form-container{
+  display: flex;
+
+}
+
+.upload-form-box{
+  display: flex;
+}
+
+.upload-form-welcome{
+  display: flex;
+}
+
+.upload-form{
+  display: flex;
+}
+
+.upload-caption-input{
+  display: flex;
+}
+
+.upload-image-button{
+  display: flex;
+}
+
+.upload-form-image-box{
+  display: flex;
+  border: 2px solid black;
+  height: 300px;
+  width: 300px;
+}
+
+.upload-form-image{
+  display: flex;
+}
+
+.upload-form-button-box{
+  display: flex;
+}
+
+.upload-form-button{
+  display: flex;
+}
+
+.navbar-closemodal-button{
+  display: flex;
+}

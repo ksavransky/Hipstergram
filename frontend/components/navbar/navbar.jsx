@@ -26,9 +26,10 @@ class Navbar extends React.Component {
         },
         content : {
           display         : "block",
-          width           : "650px",
-          height          : "400px",
-          margin          : "auto",
+          width           : "700px",
+          height          : "500px",
+          "margin-left"   : "270px",
+          position        : "relative",
           border          : '1px solid #ccc',
           padding         : '1px',
           backgroundColor : "#c5d5da",
