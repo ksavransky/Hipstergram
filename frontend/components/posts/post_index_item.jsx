@@ -58,9 +58,37 @@ class PostIndexItem extends React.Component {
     let currentMonth = currentTime.getUTCMonth();
     let currentYear = currentTime.getUTCFullYear();
 
-    let dateResult = createdAt;
 
+    let postYear = createdAt.slice(0, 4);
+    let postMonth = createdAt.slice(5, 7);
+    let postDate = createdAt.slice(8, 10);
+    let postHours = createdAt.slice(11, 13);
+    let postMinutes = createdAt.slice(14, 16);
+    let postSeconds = createdAt.slice(17, 19);
 
+    let dateResult;
+
+    if(currentYear > postYear){
+      dateResult = currentYear - postYear;
+      dateResult = dateResult + "y";
+    }else if(currentMonth > postMonth){
+      dateResult = currentMonth - postMonth;
+      dateResult = dateResult + "m";
+    }else if(currentDate > postDate){
+      dateResult = currentDate - postDate;
+      if(dateResult > 6){
+        dateResult = Math.floor(dateResult / 7);
+        dateResult = dateResult + "w";
+      }else{
+      dateResult = dateResult + "d";
+      }
+    }else if(currentHours > postHours){
+      dateResult = currentHours- postHours;
+      dateResult = dateResult + "h";
+    } else {
+      dateResult = currentMinutes- postMinutes;
+      dateResult = dateResult + "m";
+    }
 
     return dateResult;
 
