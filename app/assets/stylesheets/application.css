@@ -169,6 +169,27 @@ position: fixed; // optional depending on what you want
   border-top: 1px solid #efe9e9;
 }
 
+.post-profile-image{
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius:50%;
+  padding: 10px;
+}
+
+.post-item-user-name{
+  display: flex;
+  padding-top: 17px;
+  margin-right: 370px;
+}
+
+.post-item-date{
+  display: flex;
+  padding: 17px;
+  color: grey;
+}
+
+
 .post-item-caption{
   display: flex;
   padding: 10px;
@@ -186,13 +207,7 @@ position: fixed; // optional depending on what you want
   border: 1px solid #efe9e9
 }
 
-.post-profile-image{
-  display: flex;
-  height: 40px;
-  width: 40px;
-  border-radius:50%;
-  padding: 10px;
-}
+
 
 /*post-show-item*/
 
