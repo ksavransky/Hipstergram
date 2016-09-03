@@ -27,8 +27,8 @@ class Navbar extends React.Component {
         },
         content : {
           display            : "block",
-          width              : "700px",
-          height             : "500px",
+          width              : "600px",
+          height             : "530px",
           "margin"           : "auto",
           position           : "relative",
           border             : '2px solid grey',

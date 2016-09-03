@@ -51,6 +51,7 @@ class UploadForm extends React.Component {
 						className="upload-form-button"
 						disabled={false}
 						value="Create New Post"/>;
+					
 					caption = <div className="upload-caption-box"> Caption: &nbsp;
 						<input type="text"
 						value={this.state.caption}
@@ -75,7 +76,6 @@ class UploadForm extends React.Component {
 							{caption}
 					</div>
 
-						<br />
 						<div className="upload-form-button-box">
 							{submitButton}
 						</div>

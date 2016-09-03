@@ -285,15 +285,18 @@ position: fixed; // optional depending on what you want
 
 .upload-form-welcome{
   display: flex;
+  padding: 5px;
 }
 
 .upload-form{
   display: flex;
   flex-direction: column;
+  padding: 5px;
 }
 
 .upload-caption-input{
   display: flex;
+  width: 300px;
 }
 
 
@@ -308,22 +311,26 @@ position: fixed; // optional depending on what you want
   color: white;
   font-size: 13px;
   border-radius: 5px;
+  padding: 5px;
 }
 
 .upload-form-image-box{
   display: flex;
   border: 1px solid grey;
   border-radius: 10px;
-  height: 300px;
-  width: 300px;
+  height: 370px;
+  width: 370px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .upload-form-image{
   display: flex;
   border-radius: 10px;
   border: none;
-  height: 300px;
-  width: 300px;
+  height: 370px;
+  width: 370px;
 }
 
 .upload-form-button-box{
@@ -336,4 +343,5 @@ position: fixed; // optional depending on what you want
   color: white;
   font-size: 13px;
   border-radius: 5px;
+  margin-top: 5px;
 }
