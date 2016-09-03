@@ -148,7 +148,7 @@ position: fixed; // optional depending on what you want
 
 .post-index-ul{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 /*post-index-item*/
