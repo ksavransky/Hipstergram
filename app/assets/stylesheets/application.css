@@ -292,8 +292,19 @@ position: fixed; // optional depending on what you want
   flex-direction: column;
 }
 
-.upload-caption-input{
+.upload-caption-input-enabled{
   display: flex;
+}
+
+.upload-caption-input-disabled{
+  display: flex;
+  visibility: hidden;
+  display: none;
+}
+
+.upload-caption-box-enabled{
+  display: flex;
+  flex-direction: row;
 }
 
 .upload-image-button{
@@ -314,8 +325,10 @@ position: fixed; // optional depending on what you want
 
 .upload-form-image{
   display: flex;
-  height: 299px;
-  width: 299px;
+  border-radius: 10px;
+  border: none;
+  height: 300px;
+  width: 300px;
 }
 
 .upload-form-button-box{
@@ -324,24 +337,10 @@ position: fixed; // optional depending on what you want
 
 .upload-form-button-disabled{
   display: flex;
-  background-color: grey;
-  color: white;
-  font-size: 13px;
-  border-radius: 5px;
+  visibility: hidden;
 }
 
 .upload-form-button-enabled{
-  display: flex;
-  background-color: cornflowerblue;
-  color: white;
-  font-size: 13px;
-  border-radius: 5px;
-}
-
-
-
-
-.navbar-closemodal-button{
   display: flex;
   background-color: cornflowerblue;
   color: white;
