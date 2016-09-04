@@ -19,3 +19,10 @@ post2 = Post.create(image_url: "http://res.cloudinary.com/ksavransky/image/uploa
 post3 = Post.create(image_url: "http://res.cloudinary.com/ksavransky/image/upload/v1472661384/fedora_sgjxyn.jpg", caption: "look, a fedora", user_id: 1)
 post4 = Post.create(image_url: "http://res.cloudinary.com/ksavransky/image/upload/v1472661380/hipstuff_s81vkv.jpg", caption: "look, hipster stuff", user_id: 2)
 post5 = Post.create(image_url: "http://res.cloudinary.com/ksavransky/image/upload/v1472661376/cat_e2ue6k.jpg", caption: "look, a cat with a mustache", user_id: 3)
+
+
+comment1 = Comment.create(user_id: 1, post_id: 1, comment_text: "that dude has a mason jar! wow!")
+comment2 = Comment.create(user_id: 1, post_id: 2, comment_text: "that dude has a crazy beard!!!")
+comment3 = Comment.create(user_id: 2, post_id: 1, comment_text: "what the hell is in that thing?")
+comment4 = Comment.create(user_id: 2, post_id: 3, comment_text: "i love fedoras!")
+comment5 = Comment.create(user_id: 3, post_id: 4, comment_text: "i need all that stuff!")
