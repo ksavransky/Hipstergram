@@ -252,6 +252,27 @@ position: fixed; // optional depending on what you want
   padding: 10px;
 }
 
+.post-likes-box{
+  display: flex;
+  border-left: 1px solid #efe9e9;
+  border-right: 1px solid #efe9e9;
+  border-bottom: 1px solid #efe9e9;
+  background-color: white;
+  padding: 10px;
+}
+
+.post-comments-index{
+  display: flex;
+  border-left: 1px solid #efe9e9;
+  border-right: 1px solid #efe9e9;
+  border-bottom: 1px solid #efe9e9;
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/*NAVBAR*/
+
 .navbar{
   display: flex;
   justify-content: space-between;

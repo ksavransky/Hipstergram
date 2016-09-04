@@ -55,12 +55,14 @@ class PostIndexItem extends React.Component {
     }
 
     return dateResult;
-
   }
 
 
   render() {
     const post = this.props.post;
+
+
+
     return (
       <div className="post-index-item">
         <div className="post-item-header">
@@ -77,6 +79,12 @@ class PostIndexItem extends React.Component {
         <img src={post.image_url} className="post-image"/>
         <span className="post-item-caption">
           {post.caption}
+        </span>
+        <span className="post-likes-box">
+          Likes here eventually
+        </span>
+        <span className="post-comments-index">
+          Comments here
         </span>
       </div>
     );
