@@ -10,45 +10,9 @@ class PostIndexItem extends React.Component {
     super(props);
 
     this.timeSincePost = this.timeSincePost.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.style = {
-        overlay : {
-          position        : 'fixed',
-          top             : 0,
-          left            : 0,
-          right           : 0,
-          bottom          : 0,
-          backgroundColor : 'rgba(255, 255, 255, 0.75)',
-        },
-        content : {
-          display         : "block",
-          width           : "600px",
-          margin          : "auto",
 
-          // position        : 'fixed',
-          // top             : '75px',
-          // left            : '75px',
-          // right           : '10x',
-          // bottom          : '10px',
-          border          : '1px solid #ccc',
-          padding         : '1px',
-          backgroundColor : "#c5d5da",
-
-      }
-    };
-    this.state = {modalOpen: false};
   }
 
-
-
-  closeModal(){
-    this.setState({ modalOpen: false });
-  }
-
-  openModal(){
-    this.setState({ modalOpen: true });
-  }
 
   timeSincePost(createdAt){
     let currentTime = new Date();
@@ -98,8 +62,7 @@ class PostIndexItem extends React.Component {
   render() {
     const post = this.props.post;
     return (
-      <div className="post-index-item"
-           onClick={this.openModal}>
+      <div className="post-index-item">
         <div className="post-item-header">
                 <span className="post-item-user-photo">
                   <img src={post.user.prof_image_url} className="post-profile-image"/>
@@ -115,13 +78,6 @@ class PostIndexItem extends React.Component {
         <span className="post-item-caption">
           {post.caption}
         </span>
-        <Modal
-         isOpen={this.state.modalOpen}
-         onRequestClose={this.closeModal}
-         style={this.style}
-         >
-           <PostShowContainer post={post}/>
-       </Modal>
       </div>
     );
   }

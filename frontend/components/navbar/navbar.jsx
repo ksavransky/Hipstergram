@@ -10,6 +10,7 @@ class Navbar extends React.Component {
     this.logout = this.props.logout;
     this.redirectToLoggedIn = this.redirectToLoggedIn.bind(this);
     this.redirectToProfile = this.redirectToProfile.bind(this);
+    this.redirectToIndex = this.redirectToIndex.bind(this);
 
 
 
@@ -62,16 +63,23 @@ class Navbar extends React.Component {
     this.props.router.replace("/profile");
   }
 
+  redirectToIndex(){
+    this.props.router.replace("/posts");
+  }
+
   render() {
     const currentUser = this.props.currentUser;
     const logout = this.props.logout;
     return (
       <div className="navbar">
-          <span className="navbar-logo">
-            Hip photo
-          </span>
-          <span className="navbar-text">
-            Hipstergram!
+          <span className="navbar-logo" onClick={this.redirectToIndex}>
+            <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473023051/logo_tcqjw3.jpg" className="navbar-logo-image"/>
+            <span className="navbar-text-line" onClick={this.redirectToIndex}>
+              |
+            </span>
+            <span className="navbar-text" onClick={this.redirectToIndex}>
+              Hipstergram!
+            </span>
           </span>
           <span className="navbar-search-container">
             Search here
