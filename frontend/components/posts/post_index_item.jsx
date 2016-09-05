@@ -92,7 +92,8 @@ class PostIndexItem extends React.Component {
         <ul className="post-comments-index">
           {commentKeys.map(key => <Comment
             key={key}
-            comment={comments[key]} />)}
+            comment={comments[key]}
+            currentUser={this.props.currentUser} />)}
         </ul>
         <span className="comment-like-box">
           <span className="like-box">

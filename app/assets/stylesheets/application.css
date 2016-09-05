@@ -332,6 +332,18 @@ position: fixed; // optional depending on what you want
   font-size: inherit;
 }
 
+
+.comment-x{
+  display: flex;
+  margin-left: auto;
+  padding-right: 5px;
+  color: grey;
+}
+
+
+
+
+
 /*NAVBAR*/
 
 .navbar{

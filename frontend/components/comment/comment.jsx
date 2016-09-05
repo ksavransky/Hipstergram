@@ -8,6 +8,14 @@ class Comment extends React.Component {
 
   render() {
     const {comment} = this.props;
+    const {currentUser} = this.props;
+
+    let xButton;
+    if(comment.user_id === currentUser.id){
+      xButton = <div className="comment-x">
+        X
+      </div>;
+    }
 
     return (
       <div className="comment">
@@ -17,6 +25,7 @@ class Comment extends React.Component {
         <div className="comment-text">
           {comment.comment_text}
         </div>
+        {xButton}
       </div>
     );
   }
