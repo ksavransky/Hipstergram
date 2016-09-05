@@ -1,8 +1,7 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
 import Modal from 'react-modal';
-import PostShowContainer from './post_show_container.jsx';
-import PostShowItem from './post_show.jsx';
+import Comment from './comment.jsx';
 
 
 class PostIndexItem extends React.Component {
@@ -61,7 +60,8 @@ class PostIndexItem extends React.Component {
   render() {
     const post = this.props.post;
 
-
+    let comments = post.comments;
+    let commentKeys = Object.keys(comments);
 
     return (
       <div className="post-index-item">
@@ -83,9 +83,11 @@ class PostIndexItem extends React.Component {
         <span className="post-likes-box">
           Likes here eventually
         </span>
-        <span className="post-comments-index">
-          Comments here
-        </span>
+        <ul className="post-comments-index">
+          {commentKeys.map(key => <Comment
+            key={key}
+            comment={comments[key]} />)}
+        </ul>
       </div>
     );
   }
