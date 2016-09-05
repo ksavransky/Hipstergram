@@ -2,8 +2,6 @@ import React from 'react';
 import PostIndexItem from './post_index_item';
 
 
-
-
 class PostIndex extends React.Component {
   componentDidMount() {
     this.props.requestPosts();
@@ -18,7 +16,10 @@ class PostIndex extends React.Component {
         <ul className="post-index-ul">
           {postKeys.map(key => <PostIndexItem
             key={key}
-            post={posts[key]} />)}
+            post={posts[key]}
+            currentUser={this.props.currentUser}
+            createComment={this.props.createComment}
+            />)}
         </ul>
       </div>
     );

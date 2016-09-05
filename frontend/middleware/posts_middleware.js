@@ -9,6 +9,14 @@ import { requestPosts,
          PostConstants
        } from '../actions/post_actions.js';
 
+import { makeComment
+      } from '../util/comment_api_util.js';
+
+import {
+       receiveComment,
+        CommentConstants
+      } from '../actions/comment_actions.js';
+
 
 export default ({getState, dispatch}) => next => action => {
  const postsSuccess = data => dispatch(receivePosts(data));
@@ -24,6 +32,9 @@ export default ({getState, dispatch}) => next => action => {
     case PostConstants.CREATE_POST:
      createPost(action.post, postSuccess);
      break;
+     case CommentConstants.CREATE_COMMENT:
+      makeComment(action.comment);
+      return next(action);
    default:
      next(action);
  }
