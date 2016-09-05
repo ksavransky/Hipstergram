@@ -1,10 +1,9 @@
-export const makeComment = function(comment){
-  console.trace();
-  debugger;
+export const makeComment = function(comment, success){
   $.ajax({
     method: 'POST',
     url: 'api/comments',
-    data: comment
+    data: comment,
+    success
   });
 };
 

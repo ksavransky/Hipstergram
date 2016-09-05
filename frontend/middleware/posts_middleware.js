@@ -33,7 +33,7 @@ export default ({getState, dispatch}) => next => action => {
      createPost(action.post, postSuccess);
      break;
      case CommentConstants.CREATE_COMMENT:
-      makeComment(action.comment);
+      makeComment(action.comment, postSuccess);
       return next(action);
    default:
      next(action);
