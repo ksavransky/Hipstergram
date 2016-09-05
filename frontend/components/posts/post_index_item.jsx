@@ -77,11 +77,16 @@ class PostIndexItem extends React.Component {
                 </span>
         </div>
         <img src={post.image_url} className="post-image"/>
-        <span className="post-item-caption">
-          {post.caption}
-        </span>
         <span className="post-likes-box">
           Likes here eventually
+        </span>
+        <span className="post-item-caption-box">
+          <div className="post-item-caption-username">
+            {post.user.username}
+          </div>
+          <div className="post-item-caption-text">
+          {post.caption}
+        </div>
         </span>
         <ul className="post-comments-index">
           {commentKeys.map(key => <Comment

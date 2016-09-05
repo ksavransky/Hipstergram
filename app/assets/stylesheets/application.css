@@ -157,7 +157,9 @@ position: fixed; // optional depending on what you want
 .post-index-item{
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  margin: 20px;
+  border-bottom: 1px solid #efe9e9;
+  border-radius: 4px;
 }
 
 .post-item-header{
@@ -182,22 +184,46 @@ position: fixed; // optional depending on what you want
   display: flex;
   margin-right: auto;
   padding-top: 20px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .post-item-date{
   display: flex;
   padding: 20px;
   color: grey;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
 }
 
 
-.post-item-caption{
+.post-item-caption-box{
   display: flex;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   background: white;
   border-right: 1px solid #efe9e9;
   border-left: 1px solid #efe9e9;
-  border-bottom: 1px solid #efe9e9;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
+}
+
+.post-item-caption-username{
+  display: flex;
+  padding-left: 2px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+}
+
+.post-item-caption-text{
+  display: flex;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: 8px;
 }
 
 
@@ -207,6 +233,20 @@ position: fixed; // optional depending on what you want
   width: 570px;
   border: 1px solid #efe9e9
 }
+
+.post-likes-box{
+  display: flex;
+  border-left: 1px solid #efe9e9;
+  border-right: 1px solid #efe9e9;
+  background-color: white;
+  padding-right: 10px;
+  padding-bottom: 4px;
+  padding-top: 10px;
+  padding-left: 12px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
+}
+
 
 
 
@@ -252,14 +292,10 @@ position: fixed; // optional depending on what you want
   padding: 10px;
 }
 
-.post-likes-box{
-  display: flex;
-  border-left: 1px solid #efe9e9;
-  border-right: 1px solid #efe9e9;
-  border-bottom: 1px solid #efe9e9;
-  background-color: white;
-  padding: 10px;
-}
+
+/*End of show*/
+
+/*cCmments*/
 
 .post-comments-index{
   display: flex;
@@ -276,11 +312,13 @@ position: fixed; // optional depending on what you want
   display: flex;
   padding: 2px;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 .comment-username{
   display: flex;
   padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   font-family: inherit;
   font-weight: bold;
   font-size: inherit;
@@ -288,6 +326,8 @@ position: fixed; // optional depending on what you want
 .comment-text{
   display: flex;
   padding-left: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   font-family: inherit;
   font-size: inherit;
 }
@@ -297,6 +337,7 @@ position: fixed; // optional depending on what you want
 .navbar{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-logo{
@@ -326,22 +367,34 @@ position: fixed; // optional depending on what you want
 
 .navbar-search-container{
   display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
 }
 
 .navbar-photo-upload{
   display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
 }
 
 .navbar-user-photo{
   display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
 }
 
 .navbar-user-name{
   display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
 }
 
 .navbar-logout-button{
   display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  height: 24px;
+  width: auto;
 }
 
 /*UPLOAD FORM*/
@@ -360,7 +413,7 @@ position: fixed; // optional depending on what you want
   display: flex;
   padding: 10px;
   justify-content: center;
-  font-family: 'Roboto';
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 22px;
 
 }
@@ -374,12 +427,14 @@ position: fixed; // optional depending on what you want
 .upload-caption-input{
   display: flex;
   width: 300px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
 
 .upload-caption-box{
   display: flex;
   flex-direction: row;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
 .upload-image-button{
@@ -387,6 +442,7 @@ position: fixed; // optional depending on what you want
   background-color: cornflowerblue;
   color: white;
   font-size: 13px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   border-radius: 5px;
   padding: 5px;
 }
@@ -412,6 +468,7 @@ position: fixed; // optional depending on what you want
 
 .upload-form-button-box{
   display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
 .upload-form-button{
@@ -421,4 +478,5 @@ position: fixed; // optional depending on what you want
   font-size: 13px;
   border-radius: 5px;
   margin-top: 5px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
