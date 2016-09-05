@@ -28,15 +28,14 @@ class Navbar extends React.Component {
         },
         content : {
           display            : "block",
-          width              : "600px",
+          width              : "500px",
           height             : "530px",
           "margin"           : "auto",
           position           : "relative",
           border             : '2px solid grey',
           "border-radius"    : "10px",
-          "padding-right"    : '1px',
           "background-color" : "aliceblue",
-          "font-family"      : "Roboto, proxima-nova, Helvetica Neue, Arial"
+          "font-family"      : "proxima-nova, Helvetica Neue, Arial"
       }
     };
   }
