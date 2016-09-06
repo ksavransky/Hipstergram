@@ -33,7 +33,7 @@ class CommentForm extends React.Component {
 					value={this.state.comment_text}
 					onChange={this.update("comment_text")}
 					className="comment-text-input"
-					placeholder="Write a comment."/>
+					placeholder="Add a comment..."/>
 				</form>
 			</div>
 		);
