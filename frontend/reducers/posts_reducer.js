@@ -23,6 +23,14 @@ const PostsReducer = function(state = {}, action){
       return newState;
     case LikeConstants.REMOVE_LIKE:
       const newLikeState = merge({}, state);
+      let likesPost = newLikeState[action.id.post_id];
+      let likes = likesPost.likes;
+      let likeIdx = likes.findIndex((e)=>{
+        return e.id === action.id.id;
+      });
+      if (likeIdx !== -1){
+        likesPost.likes.splice(likeIdx, 1);
+      }
       return newLikeState;
     default:
       return state;

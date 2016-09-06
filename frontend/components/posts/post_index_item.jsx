@@ -76,7 +76,7 @@ class PostIndexItem extends React.Component {
         id: likeId,
         user_id: this.props.currentUser.id,
         post_id: this.props.post.id};
-    this.props.destroyLike({like});
+    this.props.destroyLike(like);
   }
 
 
