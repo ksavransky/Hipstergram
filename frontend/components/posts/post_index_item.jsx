@@ -85,9 +85,11 @@ class PostIndexItem extends React.Component {
 
     let likesSymbol;
     if(currentUserLikes){
-      likesSymbol = <div className="likes-symbol">Unlike</div>;
+      likesSymbol = <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473179780/fullmasonjar2_sajm7u.jpg"
+        className="likes-symbol"/>;
     } else {
-      likesSymbol = <div className="likes-symbol">Like</div>;
+      likesSymbol = <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473130945/emptyjar_uieq54.png"
+        className="likes-symbol"/>;
     }
 
 
@@ -124,11 +126,8 @@ class PostIndexItem extends React.Component {
             destroyComment={this.props.destroyComment} />)}
         </ul>
         <span className="comment-like-box">
-          <span className="like-box">
-
-          </span>
-          <span className="comment-form">
             {likesSymbol}
+          <span className="comment-form">
             <CommentForm
               post={post}
               currentUser={this.props.currentUser}

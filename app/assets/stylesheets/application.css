@@ -247,25 +247,6 @@ position: fixed; // optional depending on what you want
   font-size: 16px;
 }
 
-.empty-jar{
-  display: flex;
-  height: 30px;
-  width: auto;
-}
-
-.likes-text{
-  font-weight: bold;
-}
-
-.likes-symbol{
-  display: flex;
-  height: 40px;
-  width: 40px;
-}
-
-
-
-
 /*post-show-item*/
 
 .post-show-item{
@@ -366,18 +347,31 @@ position: fixed; // optional depending on what you want
     background-color: white;
 }
 
-.comment-form-box{
-  display: flex;
-}
-
 .comment-text-input{
   display: flex;
   border: none;
-  padding: 5px;
+  padding: 10px;
   font-size: 14px;
   width: 450px;
 }
 
+
+.likes-text{
+  font-weight: bold;
+}
+
+.likes-symbol{
+  display: flex;
+  height: 40px;
+  width: auto;
+  padding: 10px;
+}
+.comment-like-box{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding-top: 20px;
+}
 
 
 
