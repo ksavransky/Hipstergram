@@ -1,5 +1,6 @@
 import { PostConstants } from '../actions/post_actions';
 import { CommentConstants } from '../actions/comment_actions.js';
+import { LikeConstants } from '../actions/like_actions.js';
 import merge from 'lodash/merge';
 
 const PostsReducer = function(state = {}, action){
@@ -20,6 +21,9 @@ const PostsReducer = function(state = {}, action){
         post.comments.splice(idx, 1);
       }
       return newState;
+    case LikeConstants.REMOVE_LIKE:
+      const newLikeState = merge({}, state);
+      return newLikeState;
     default:
       return state;
   }

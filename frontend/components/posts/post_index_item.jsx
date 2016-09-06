@@ -10,7 +10,8 @@ class PostIndexItem extends React.Component {
     super(props);
 
     this.timeSincePost = this.timeSincePost.bind(this);
-
+    this.addLike = this.addLike.bind(this);
+    this.subtractLike = this.subtractLike.bind(this);
   }
 
 
@@ -57,6 +58,27 @@ class PostIndexItem extends React.Component {
     return dateResult;
   }
 
+  addLike(){
+    let like = {
+        user_id: this.props.currentUser.id,
+        post_id: this.props.post.id};
+    this.props.createLike({like});
+  }
+
+  subtractLike(){
+    let likeId;
+    this.props.post.likes.forEach(like => {
+      if(like.user_id === this.props.currentUser.id){
+        likeId = like.id;
+      }
+    });
+    let like = {
+        id: likeId,
+        user_id: this.props.currentUser.id,
+        post_id: this.props.post.id};
+    this.props.destroyLike({like});
+  }
+
 
   render() {
     const post = this.props.post;
@@ -77,6 +99,7 @@ class PostIndexItem extends React.Component {
     }
 
     let currentUserLikes = false;
+
     post.likes.forEach(like => {
       if(like.user_id === this.props.currentUser.id){
         currentUserLikes = true;
@@ -86,12 +109,15 @@ class PostIndexItem extends React.Component {
     let likesSymbol;
     if(currentUserLikes){
       likesSymbol = <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473179780/fullmasonjar2_sajm7u.jpg"
-        className="likes-symbol"/>;
+        className="likes-symbol"
+        onClick={this.subtractLike}
+        />;
     } else {
       likesSymbol = <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473130945/emptyjar_uieq54.png"
-        className="likes-symbol"/>;
+        className="likes-symbol"
+        onClick={this.addLike}
+        />;
     }
-
 
     return (
       <div className="post-index-item">
