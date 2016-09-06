@@ -332,11 +332,14 @@ position: fixed; // optional depending on what you want
   font-size: inherit;
 }
 
-
 .comment-x{
+  display: none;
+}
+
+.comment:hover .comment-x{
   display: flex;
   margin-left: auto;
-  padding-right: 5px;
+  padding-right: 10px;
   color: grey;
 }
 
