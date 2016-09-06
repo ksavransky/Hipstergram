@@ -381,13 +381,14 @@ position: fixed; // optional depending on what you want
 
 .navbar{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .navbar-logo{
   display: flex;
   cursor: pointer;
+  margin-left: 140px;
 }
 
 .navbar-logo-image{
@@ -417,6 +418,7 @@ position: fixed; // optional depending on what you want
   display: flex;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
+  margin-left: 235px;
 }
 
 .navbar-photo-upload{
@@ -424,6 +426,12 @@ position: fixed; // optional depending on what you want
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 230px;
+}
+
+.navbar-upload-image{
+  height: 40px;
+  width: auto;
 }
 
 .navbar-user-photo{
@@ -431,6 +439,16 @@ position: fixed; // optional depending on what you want
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 50px;
+}
+
+.navbar-user-photo-image{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .navbar-user-name{
@@ -442,11 +460,10 @@ position: fixed; // optional depending on what you want
 
 .navbar-logout-button{
   display: flex;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
-  font-size: 16px;
-  height: 24px;
+  height: 40px;
   width: auto;
   cursor: pointer;
+  margin-left: 50px;
 }
 
 /*UPLOAD FORM*/

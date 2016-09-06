@@ -34,7 +34,7 @@ class Navbar extends React.Component {
           position           : "relative",
           border             : '2px solid grey',
           "border-radius"    : "10px",
-          "background-color" : "aliceblue",
+          "background-color" : "#fafafa",
           "font-family"      : "proxima-nova, Helvetica Neue, Arial"
       }
     };
@@ -81,18 +81,25 @@ class Navbar extends React.Component {
             </span>
           </span>
           <span className="navbar-search-container">
-            Search here
+            Search Bar
           </span>
           <span className="navbar-photo-upload" onClick={this.openModal}>
-            Photo upload here
+            <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473186078/photoupload3_qnckd6.jpg"
+              className="navbar-upload-image"
+              />
           </span>
           <span className="navbar-user-photo" onClick={this.redirectToProfile}>
-            User photo
+            <img src={currentUser.prof_image_url}
+              className="navbar-user-photo-image"
+              />
           </span>
-          <span className="navbar-user-name">
+          <span className="navbar-user-name" onClick={this.redirectToProfile}>
             Hi, {currentUser.username}!
           </span>
-          <button className="navbar-logout-button" onClick={this.redirectToLoggedIn}>Log Out</button>
+            <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473187216/logout_olzevl.jpg"
+              className="navbar-logout-button"
+              onClick={this.redirectToLoggedIn}
+              />
           <Modal
            isOpen={this.state.modalOpen}
            onRequestClose={this.closeModal}
