@@ -64,10 +64,7 @@ class PostIndexItem extends React.Component {
     let comments = post.comments;
     let commentKeys = Object.keys(comments);
 
-    console.log(post);
-    console.log(post.likes.length);
-
-    let likes;
+    let likesDiv;
     let likesText;
     if(post.likes.length === 1) {
        likesText = `${post.likes.length} like`;
@@ -75,10 +72,22 @@ class PostIndexItem extends React.Component {
     if (post.likes.length > 1) {
        likesText = `${post.likes.length} likes`;
     }
-
-    console.log(likesText);
     if(post.likes.length !== 0) {
-      likes = <div className="likes-text"> {likesText} </div>;
+      likesDiv = <div className="likes-text"> {likesText} </div>;
+    }
+
+    let currentUserLikes = false;
+    post.likes.forEach(like => {
+      if(like.user_id === this.props.currentUser.id){
+        currentUserLikes = true;
+      }
+    });
+
+    let likesSymbol;
+    if(currentUserLikes){
+      likesSymbol = <div className="likes-symbol">Unlike</div>;
+    } else {
+      likesSymbol = <div className="likes-symbol">Like</div>;
     }
 
 
@@ -97,7 +106,7 @@ class PostIndexItem extends React.Component {
         </div>
         <img src={post.image_url} className="post-image"/>
         <span className="post-likes-box">
-          {likes}
+          {likesDiv}
         </span>
         <span className="post-item-caption-box">
             <div className="post-item-caption-username">
@@ -119,6 +128,7 @@ class PostIndexItem extends React.Component {
 
           </span>
           <span className="comment-form">
+            {likesSymbol}
             <CommentForm
               post={post}
               currentUser={this.props.currentUser}

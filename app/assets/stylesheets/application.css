@@ -257,6 +257,12 @@ position: fixed; // optional depending on what you want
   font-weight: bold;
 }
 
+.likes-symbol{
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+
 
 
 
