@@ -13,9 +13,8 @@ class Api::CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-
     if(@comment.destroy)
-      render "api/posts/show", status: 200
+      render "api/comments/show", status: 200
     else
       @errors = @comment.errors.full_messages
       render "api/shared/error", status: 422

@@ -7,7 +7,7 @@ export const makeComment = function(comment, success){
   });
 };
 
-export const destroyComment = function(comment, success){
+export const deleteComment = function(comment, success){
   $.ajax({
     method: 'DELETE',
     url: `api/comments/${comment.id}`,

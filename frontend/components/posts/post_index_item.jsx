@@ -93,7 +93,8 @@ class PostIndexItem extends React.Component {
           {commentKeys.map(key => <Comment
             key={key}
             comment={comments[key]}
-            currentUser={this.props.currentUser} />)}
+            currentUser={this.props.currentUser}
+            destroyComment={this.props.destroyComment} />)}
         </ul>
         <span className="comment-like-box">
           <span className="like-box">
@@ -103,7 +104,7 @@ class PostIndexItem extends React.Component {
             <CommentForm
               post={post}
               currentUser={this.props.currentUser}
-              createComment={this.props.createComment} />
+              createComment={this.props.createComment}/>
           </span>
         </span>
       </div>

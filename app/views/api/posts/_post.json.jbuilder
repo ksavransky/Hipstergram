@@ -9,4 +9,5 @@ json.comments post.comments.each do |comment|
       json.username comment.user.username
       json.comment_text comment.comment_text
       json.user_id comment.user.id
+      json.id comment.id
 end

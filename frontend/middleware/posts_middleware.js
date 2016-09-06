@@ -9,11 +9,14 @@ import { requestPosts,
          PostConstants
        } from '../actions/post_actions.js';
 
-import { makeComment
+import { makeComment,
+        deleteComment
       } from '../util/comment_api_util.js';
 
 import {
-       receiveComment,
+        receiveComment,
+        destroyCommment,
+        removeComment,
         CommentConstants
       } from '../actions/comment_actions.js';
 
@@ -21,6 +24,8 @@ import {
 export default ({getState, dispatch}) => next => action => {
  const postsSuccess = data => dispatch(receivePosts(data));
  const postSuccess = data => dispatch(receivePost(data));
+ const destroySuccess = comment => dispatch(removeComment(comment));
+
  const result = next(action);
  switch(action.type){
    case PostConstants.REQUEST_POSTS:
@@ -34,6 +39,9 @@ export default ({getState, dispatch}) => next => action => {
      break;
      case CommentConstants.CREATE_COMMENT:
       makeComment(action.comment, postSuccess);
+      return next(action);
+     case CommentConstants.DESTROY_COMMENT:
+      deleteComment(action.comment, destroySuccess);
       return next(action);
    default:
      next(action);

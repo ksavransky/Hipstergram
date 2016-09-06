@@ -1,4 +1,5 @@
 import { PostConstants } from '../actions/post_actions';
+import { CommentConstants } from '../actions/comment_actions.js';
 import merge from 'lodash/merge';
 
 const PostsReducer = function(state = {}, action){
@@ -8,6 +9,17 @@ const PostsReducer = function(state = {}, action){
     case PostConstants.RECEIVE_POST:
       const newPost = {[action.post.id]: action.post};
       return merge({}, state, newPost);
+    case CommentConstants.REMOVE_COMMENT:
+      const newState = merge({}, state);
+      let post = newState[action.id.post_id];
+      let comments = post.comments;
+      let idx = comments.findIndex((e)=>{
+        return e.id === action.id.id;
+      });
+      if (idx !== -1){
+        post.comments.splice(idx, 1);
+      }
+      return newState;
     default:
       return state;
   }

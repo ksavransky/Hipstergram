@@ -3,8 +3,13 @@ import React from 'react';
 class Comment extends React.Component {
   constructor(props) {
     super(props);
+    this.deleteComment = this.deleteComment.bind(this);
   }
 
+
+  deleteComment(){
+    this.props.destroyComment(this.props.comment);
+  }
 
   render() {
     const {comment} = this.props;
@@ -12,7 +17,8 @@ class Comment extends React.Component {
 
     let xButton;
     if(comment.user_id === currentUser.id){
-      xButton = <div className="comment-x">
+      xButton = <div className="comment-x"
+        onClick={this.deleteComment}>
         X
       </div>;
     }
