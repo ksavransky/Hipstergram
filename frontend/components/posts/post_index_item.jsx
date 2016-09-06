@@ -70,10 +70,7 @@ class PostIndexItem extends React.Component {
     let likes;
     let likesText = `${post.likes.length} likes`;
     console.log(likesText);
-    if(post.likes.length === 0){
-      likes = <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473130945/emptyjar_uieq54.png"
-        className="empty-jar"/>;
-    } else {
+    if(post.likes.length !== 0) {
       likes = <div className="likes-text"> {likesText} </div>;
     }
 
