@@ -142,10 +142,25 @@ position: fixed; // optional depending on what you want
 
 /*post index*/
 
+.post-page{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.suggestions-box{
+  margin-top: 60px;
+  margin-left: 40px;
+  display: flex;
+  background-color: white;
+  width: 570px;
+  align-self: center;
+}
+
 .post-index{
   display: flex;
   justify-content: center;
-  background-color: #fafafa;
 }
 
 .post-index-ul{

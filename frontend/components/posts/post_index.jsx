@@ -11,6 +11,10 @@ class PostIndex extends React.Component {
     let { posts } = this.props;
     const postKeys = Object.keys(posts);
     return(
+      <div className="post-page">
+        <div className="suggestions-box">
+          suggestions here
+        </div>
 
       <div className="post-index">
         <ul className="post-index-ul">
@@ -25,6 +29,7 @@ class PostIndex extends React.Component {
             />)}
         </ul>
       </div>
+    </div>
     );
   }
 }
