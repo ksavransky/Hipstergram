@@ -341,6 +341,7 @@ position: fixed; // optional depending on what you want
   margin-left: auto;
   padding-right: 10px;
   color: grey;
+  cursor: pointer;
 }
 
 .comment-form-container{
@@ -375,6 +376,7 @@ position: fixed; // optional depending on what you want
 
 .navbar-logo{
   display: flex;
+  cursor: pointer;
 }
 
 .navbar-logo-image{
@@ -382,6 +384,7 @@ position: fixed; // optional depending on what you want
   height: 60px;
   width: auto;
   padding: 2px;
+  cursor: pointer;
 }
 
 .navbar-text-line{
@@ -396,6 +399,7 @@ position: fixed; // optional depending on what you want
   font-size: 26px;
   font-weight: bold;
   padding: 15px;
+  cursor: pointer;
 }
 
 .navbar-search-container{
@@ -408,18 +412,21 @@ position: fixed; // optional depending on what you want
   display: flex;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .navbar-user-photo{
   display: flex;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .navbar-user-name{
   display: flex;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .navbar-logout-button{
@@ -428,6 +435,7 @@ position: fixed; // optional depending on what you want
   font-size: 16px;
   height: 24px;
   width: auto;
+  cursor: pointer;
 }
 
 /*UPLOAD FORM*/

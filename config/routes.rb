@@ -3,7 +3,8 @@ Rails.application.routes.draw do
     resource :user, only: [:create, :update]
     resource :session, only: [:create, :destroy, :show]
     resources :posts
-    resources :comments
+    resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
 
   root "static_pages#root"
