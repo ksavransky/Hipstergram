@@ -26,3 +26,10 @@ comment2 = Comment.create(user_id: 1, post_id: 2, comment_text: "that dude has a
 comment3 = Comment.create(user_id: 2, post_id: 1, comment_text: "what the hell is in that thing?")
 comment4 = Comment.create(user_id: 2, post_id: 3, comment_text: "i love fedoras!")
 comment5 = Comment.create(user_id: 3, post_id: 4, comment_text: "i need all that stuff!")
+
+like1 = Like.create(user_id: 1, post_id: 1)
+like2 = Like.create(user_id: 1, post_id: 2)
+like3 = Like.create(user_id: 1, post_id: 3)
+like4 = Like.create(user_id: 2, post_id: 1)
+like5 = Like.create(user_id: 3, post_id: 1)
+like6 = Like.create(user_id: 4, post_id: 5)

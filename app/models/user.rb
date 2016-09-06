@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
 	has_many :posts
 	has_many :comments
+	has_many :likes
 
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness

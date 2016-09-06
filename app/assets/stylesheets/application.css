@@ -247,6 +247,16 @@ position: fixed; // optional depending on what you want
   font-size: 16px;
 }
 
+.empty-jar{
+  display: flex;
+  height: 30px;
+  width: auto;
+}
+
+.likes-text{
+  font-weight: bold;
+}
+
 
 
 
