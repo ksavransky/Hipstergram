@@ -36,6 +36,7 @@ h1, h5 {
   color: white;
   font-size: 13px;
   border-radius: 5px;
+  outline: none;
 }
 
 .login-button-guest{
@@ -44,6 +45,7 @@ h1, h5 {
   color: white;
   font-size: 13px;
   border-radius: 5px;
+  outline: none;
 }
 
 .login-sign-up-switch{
@@ -514,6 +516,7 @@ position: fixed; // optional depending on what you want
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   border-radius: 5px;
   padding: 5px;
+  outline: none;
 }
 
 .upload-form-image-box{
@@ -548,4 +551,5 @@ position: fixed; // optional depending on what you want
   border-radius: 5px;
   margin-top: 5px;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  outline: none;
 }
