@@ -68,7 +68,14 @@ class PostIndexItem extends React.Component {
     console.log(post.likes.length);
 
     let likes;
-    let likesText = `${post.likes.length} likes`;
+    let likesText;
+    if(post.likes.length === 1) {
+       likesText = `${post.likes.length} like`;
+    }
+    if (post.likes.length > 1) {
+       likesText = `${post.likes.length} likes`;
+    }
+
     console.log(likesText);
     if(post.likes.length !== 0) {
       likes = <div className="likes-text"> {likesText} </div>;
