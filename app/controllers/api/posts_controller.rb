@@ -1,10 +1,9 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = current_user.get_posts
 
     render :index
-      # does this need a path like below
-      # remember this is just a way to send info back to ajax success
+
   end
 
   def show
