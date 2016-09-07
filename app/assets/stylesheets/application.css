@@ -1,13 +1,16 @@
 body {
    font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+   background-color: #fafafa;
+    margin:0;
  }
 
 header {
-  margin-left: 5%;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  background-color: white;
 }
 
 h1, h5 {
+  margin-top: 0px;
   margin-bottom: 0px;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
@@ -556,4 +559,82 @@ position: fixed; // optional depending on what you want
   margin-top: 5px;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   outline: none;
+}
+
+
+/*User show page*/
+
+.user-show{
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.user-show-photo{
+  display: flex;
+}
+
+.user-show-photo-image{
+  display: flex;
+  height: 150px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.user-show-user-info{
+  display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  flex-direction: column;
+}
+
+.user-show-username{
+  display: inherit;
+  font-family: inherit;
+}
+
+.user-show-follow-button{
+  display: inherit;
+  font-family: inherit;
+}
+
+.user-show-fullname{
+  display: inherit;
+  font-family: inherit;
+}
+
+.user-show-profile-text{
+  display: inherit;
+  font-family: inherit;
+}
+
+.user-show-relationships{
+  display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  flex-direction: column;
+}
+
+.user-show-posts-count{
+  display: inherit;
+  font-family: inherit;
+}
+
+.user-show-followers-count{
+  display: inherit;
+  font-family: inherit;
+}
+
+.user-show-following-count{
+  display: inherit;
+  font-family: inherit;
+}
+
+.user-show-posts{
+  display: inherit;
+  font-family: inherit;
+}
+
+.user-post-image{
+  display: flex;
+  height: 50px;
+  width: 50px;
 }
