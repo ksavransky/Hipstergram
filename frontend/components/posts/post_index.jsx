@@ -1,5 +1,6 @@
 import React from 'react';
 import PostIndexItem from './post_index_item';
+import Suggestion from '../suggestion/suggestion.jsx';
 
 
 class PostIndex extends React.Component {
@@ -13,7 +14,7 @@ class PostIndex extends React.Component {
     return(
       <div className="post-page">
         <div className="suggestions-box">
-          suggestions here
+          <Suggestion/>
         </div>
 
       <div className="post-index">
