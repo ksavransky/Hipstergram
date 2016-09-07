@@ -6,6 +6,7 @@ import { createComment } from '../../actions/comment_actions.js';
 import { destroyComment } from '../../actions/comment_actions.js';
 import { createLike } from '../../actions/like_actions.js';
 import { destroyLike } from '../../actions/like_actions.js';
+import { requestUsers} from '../../actions/user_actions.js';
 
 const mapStateToProps = state => ({
   posts: state.posts,
@@ -18,7 +19,8 @@ const mapDispatchToProps = dispatch => ({
   createComment: (comment) => dispatch(createComment(comment)),
   destroyComment: (comment) => dispatch(destroyComment(comment)),
   createLike: (like) => dispatch(createLike(like)),
-  destroyLike: (like) => dispatch(destroyLike(like))
+  destroyLike: (like) => dispatch(destroyLike(like)),
+  requestUsers: () => dispatch(requestUsers()),
 });
 
 export default connect(

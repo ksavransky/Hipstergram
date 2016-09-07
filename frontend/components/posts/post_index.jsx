@@ -6,16 +6,13 @@ import Suggestion from '../suggestion/suggestion.jsx';
 class PostIndex extends React.Component {
   componentDidMount() {
     this.props.requestPosts();
+    this.props.requestUsers();
   }
 
   render() {
     let { posts } = this.props;
     const postKeys = Object.keys(posts);
     return(
-      <div className="post-page">
-        <div className="suggestions-box">
-          <Suggestion/>
-        </div>
 
       <div className="post-index">
         <ul className="post-index-ul">
@@ -30,7 +27,7 @@ class PostIndex extends React.Component {
             />)}
         </ul>
       </div>
-    </div>
+
     );
   }
 }

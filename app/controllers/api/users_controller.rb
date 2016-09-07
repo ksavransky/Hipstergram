@@ -6,6 +6,11 @@ class Api::UsersController < ApplicationController
 		render :index
 	end
 
+	def show
+    @user = User.find(params[:id])
+    # does this need a path like below
+  end
+
 	def create
 		@user = User.new(user_params)
 

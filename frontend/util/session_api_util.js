@@ -3,7 +3,7 @@ import { receiveCurrentUser, receiveErrors } from '../actions/session_actions';
 export const updateUser = function(user, success){
   $.ajax({
     method: 'PATCH',
-    url: `api/user`,
+    url: `api/users`,
     data: user,
     success
   });
@@ -22,7 +22,7 @@ export const login = function(user, success, error) {
 export const signup = function(user, success, error) {
 	$.ajax({
 		method: 'POST',
-		url: '/api/user',
+		url: '/api/users',
 		data: user,
 		success,
 		error
