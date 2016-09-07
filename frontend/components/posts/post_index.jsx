@@ -1,6 +1,5 @@
 import React from 'react';
 import PostIndexItem from './post_index_item';
-import Suggestion from '../suggestion/suggestion.jsx';
 
 
 class PostIndex extends React.Component {
