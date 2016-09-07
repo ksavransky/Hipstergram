@@ -15,6 +15,28 @@ class UserShow extends React.Component {
     const posts = user.posts;
     const postKeys = Object.keys(posts);
 
+		console.log(currentUser);
+
+		let following = false;
+		currentUser.followees.forEach(obj => {
+			if(obj.id === user.id){
+				following = true;
+			}
+		});
+
+		let followButton;
+		if(currentUser.id !== user.id){
+			if (following === false){
+				followButton = <div className="follow-button">
+					follow
+				</div>;
+			} else {
+				followButton = <div className="follow-button">
+					unfollow
+				</div>;
+			}
+		}
+
 		return (
       <div className="user-show">
 
@@ -30,7 +52,7 @@ class UserShow extends React.Component {
 				            {user.username}
 				          </div>
 				          <div className="user-show-follow-button">
-										Follow button
+										{followButton}
 				          </div>
 							</div>
 
