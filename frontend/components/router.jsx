@@ -5,7 +5,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import PostIndexContainer from '../components/posts/post_index_container.jsx';
-import UserProfileContainer from '../components/user_profile/user_profile_container.js'
+import UserShowContainer from '../components/users/user_show_container.js';
 
 
 
@@ -40,7 +40,7 @@ class AppRouter extends React.Component{
       <Router history={ hashHistory }>
         <Route path="/" component={ App } onEnter={this._ensureLoggedIn}>
             <Route path="/posts" component={ PostIndexContainer }/>
-            <Route path="/profile" component={ UserProfileContainer }/>
+            <Route path="/users/:userId" component={ UserShowContainer }/>
         </Route>
           <Route path="/login" component={ SessionFormContainer } onEnter={this._redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={this._redirectIfLoggedIn}/>

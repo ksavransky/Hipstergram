@@ -12,6 +12,7 @@ class PostIndexItem extends React.Component {
     this.timeSincePost = this.timeSincePost.bind(this);
     this.addLike = this.addLike.bind(this);
     this.subtractLike = this.subtractLike.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
 
@@ -79,6 +80,11 @@ class PostIndexItem extends React.Component {
     this.props.destroyLike(like);
   }
 
+  handleClick() {
+    const userId = this.props.post.user_id;
+    hashHistory.push("users/" + userId );
+  }
+
 
   render() {
     const post = this.props.post;
@@ -122,10 +128,13 @@ class PostIndexItem extends React.Component {
     return (
       <div className="post-index-item">
         <div className="post-item-header">
-                <span className="post-item-user-photo">
-                  <img src={post.user.prof_image_url} className="post-profile-image"/>
+                <span className="post-item-user-photo"
+                  onClick={this.handleClick}>
+                  <img src={post.user.prof_image_url}
+                    className="post-profile-image"/>
                 </span>
-                <span className="post-item-user-name">
+                <span className="post-item-user-name"
+                  onClick={this.handleClick}>
                   {post.user.username}
                 </span>
                 <span className="post-item-date">
