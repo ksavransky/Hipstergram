@@ -59,8 +59,10 @@ class Navbar extends React.Component {
   }
 
   redirectToProfile(){
-    this.props.router.replace("/profile");
+    const userId = this.props.currentUser.id;
+    this.props.router.replace("users/" + userId );
   }
+
 
   redirectToIndex(){
     this.props.router.replace("/posts");
