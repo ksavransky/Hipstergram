@@ -1,5 +1,6 @@
 import React from 'react';
 import UserPhotos from './user_photos.jsx';
+import Masonry from 'react-masonry-component';
 
 
 class UserShow extends React.Component {
@@ -16,46 +17,56 @@ class UserShow extends React.Component {
 
 		return (
       <div className="user-show">
-        <div className="user-show-photo">
-          <img src={user.prof_image_url}
-            className="user-show-photo-image"
-            />;
-        </div>
 
-        <div className="user-show-user-info">
-          <div className="user-show-username">
-            {user.username}
-          </div>
-          <div className="user-show-follow-button">
-          </div>
-          <div className="user-show-fullname">
-            Full name: {user.fullname}
-          </div>
-          <div className="user-show-profile-text">
-            About me: {user.profile_text}
-          </div>
-        </div>
+        <div className="user-show-header">
+					<img src={user.prof_image_url}
+						className="user-show-photo-image"
+						/>
 
-        <div className="user-show-relationships">
-          <div className="user-show-posts-count">
-            Posts: {user.posts.length}
-          </div>
-          <div className="user-show-followers-count">
-            Followers: {user.followers.length}
-          </div>
-          <div className="user-show-following-count">
-            Following: {user.followees.length}
-          </div>
-        </div>
+		        <div className="user-show-user-info">
 
-        <ul className="user-show-posts">
-          {postKeys.map(key => <UserPhotos
-            key={key}
-            post={posts[key]}
-            />)}
-        </ul>
+							<div className="user-show-namebutton">
+				          <div className="user-show-username">
+				            {user.username}
+				          </div>
+				          <div className="user-show-follow-button">
+										Follow button
+				          </div>
+							</div>
 
+			        <div className="user-show-relationships">
+			          <div className="user-show-posts-count">
+			            <strong>{user.posts.length}</strong>
+										<div className="rel-words">posts</div>
+			          </div>
+			          <div className="user-show-followers-count">
+			             <strong>{user.followers.length}</strong>
+										 <div className="rel-words">followers</div>
+			          </div>
+			          <div className="user-show-following-count">
+			            <strong>{user.followees.length}</strong>
+										<div className="rel-words">followees</div>
+			          </div>
+			        </div>
 
+							<div className="user-show-fullname">
+								{user.fullname}
+							</div>
+							<div className="user-show-profile-text">
+								About me: {user.profile_text}
+							</div>
+					</div>
+
+				</div>
+
+				<Masonry className='masonry-container'
+					elementType={'ul'}
+					options={{fitWidth: true}}>
+		          {postKeys.map(key => <UserPhotos
+		            key={key}
+		            post={posts[key]}
+		            />)}
+				  </Masonry>
       </div>
 		);
 	}

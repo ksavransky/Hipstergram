@@ -570,26 +570,41 @@ position: fixed; // optional depending on what you want
   background-color: #fafafa;
 }
 
-.user-show-photo{
+.user-show-header{
   display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin-left: 240px;
+  margin-top: 50px;
 }
 
 .user-show-photo-image{
   display: flex;
   height: 150px;
-  width: auto;
+  width: 150px;
   border-radius: 50%;
+  border: 1px solid grey;
+  margin-right: 100px;
 }
 
 .user-show-user-info{
   display: flex;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   flex-direction: column;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  width: 600px
+}
+
+.user-show-namebutton{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
 
 .user-show-username{
   display: inherit;
   font-family: inherit;
+  font-size: 34px;
+  margin-right: 40px;
 }
 
 .user-show-follow-button{
@@ -600,6 +615,7 @@ position: fixed; // optional depending on what you want
 .user-show-fullname{
   display: inherit;
   font-family: inherit;
+  font-weight: bold;
 }
 
 .user-show-profile-text{
@@ -609,32 +625,42 @@ position: fixed; // optional depending on what you want
 
 .user-show-relationships{
   display: flex;
+  flex-direction: row;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
-  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .user-show-posts-count{
   display: inherit;
   font-family: inherit;
+  margin-right: 5px;
 }
 
 .user-show-followers-count{
   display: inherit;
   font-family: inherit;
+  margin-right: 5px;
+}
+
+.rel-words{
+  display: inherit;
+  font-family: inherit;
+  margin-left: 4px;
+  margin-right: 20px;
 }
 
 .user-show-following-count{
   display: inherit;
   font-family: inherit;
 }
-
-.user-show-posts{
-  display: inherit;
-  font-family: inherit;
+.masonry-container{
+  display: flex;
+  align-self: center;
 }
 
 .user-post-image{
   display: flex;
-  height: 50px;
-  width: 50px;
+  height: 300px;
+  width: 300px;
+  padding: 20px;
 }
