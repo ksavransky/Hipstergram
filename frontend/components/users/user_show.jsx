@@ -53,7 +53,8 @@ class UserShow extends React.Component {
 								{user.fullname}
 							</div>
 							<div className="user-show-profile-text">
-								About me: {user.profile_text}
+								<div className="about-me">About me: </div>
+								<div className="profile-text">{user.profile_text}</div>
 							</div>
 					</div>
 

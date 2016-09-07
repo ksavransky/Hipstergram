@@ -574,7 +574,7 @@ position: fixed; // optional depending on what you want
   display: flex;
   flex-direction: row;
   padding: 20px;
-  margin-left: 240px;
+  margin-left: 280px;
   margin-top: 50px;
 }
 
@@ -616,12 +616,9 @@ position: fixed; // optional depending on what you want
   display: inherit;
   font-family: inherit;
   font-weight: bold;
+  margin-bottom: 6px;
 }
 
-.user-show-profile-text{
-  display: inherit;
-  font-family: inherit;
-}
 
 .user-show-relationships{
   display: flex;
@@ -647,7 +644,26 @@ position: fixed; // optional depending on what you want
   font-family: inherit;
   margin-left: 4px;
   margin-right: 20px;
+  margin-top: 1px;
 }
+
+.user-show-profile-text{
+  display: inherit;
+  font-family: inherit;
+}
+.about-me{
+  display: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  padding-right: 4px;
+}
+
+.profile-text{
+  display: inherit;
+  font-family: inherit;
+  margin-top: 2px;
+}
+
 
 .user-show-following-count{
   display: inherit;
