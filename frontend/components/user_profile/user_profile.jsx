@@ -13,6 +13,7 @@ class UserProfile extends React.Component {
 		return (
 			<div className="upload-form-container">
         <h2>Profile!!!!!</h2>
+				{this.props.currentUser.username}
 			</div>
 		);
 	}
