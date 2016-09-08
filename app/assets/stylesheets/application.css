@@ -655,8 +655,30 @@ position: fixed; // optional depending on what you want
 }
 
 .user-show-follow-button{
+  display: flex;
+  font-family: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow-button{
   display: inherit;
   font-family: inherit;
+  background-color: green;
+  color: white;
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.unfollow-button{
+  display: inherit;
+  font-family: inherit;
+  background-color: red;
+  color: white;
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid grey;
 }
 
 .user-show-fullname{
