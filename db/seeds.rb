@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-user1 = User.create(username: "Guest", password: "password", fullname: "John Doe Hipster", profile_text: "I used Hipstergram before you.", prof_image_url: "http://res.cloudinary.com/ksavransky/image/upload/v1472662758/beebster_y0yjao.jpg")
+user1 = User.create(username: "Guest", password: "password", fullname: "Beebster", profile_text: "I used Hipstergram before you.", prof_image_url: "http://res.cloudinary.com/ksavransky/image/upload/v1472662758/beebster_y0yjao.jpg")
 user2 = User.create(username: "hipguy", password: "password", fullname: "Mike Hipster", profile_text: "What up Williamsburg.", prof_image_url: "http://res.cloudinary.com/ksavransky/image/upload/v1472748072/hipsterprof5_nyzvec.jpg")
 user3 = User.create(username: "hipchick", password: "password", fullname: "Jane Hipster", profile_text: "I don't go there anymore.", prof_image_url: "http://res.cloudinary.com/ksavransky/image/upload/v1472748074/hipsterprof4_s3p9fw.jpg")
 user4 = User.create(username: "whateverdude", password: "password", fullname: "Joe Hipster", profile_text: "Arcade Fire used to be cool.", prof_image_url: "http://res.cloudinary.com/ksavransky/image/upload/v1472748083/hipsterprof1_x2tacz.webp")
