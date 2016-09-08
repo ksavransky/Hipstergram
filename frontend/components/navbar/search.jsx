@@ -22,8 +22,6 @@ class Search extends React.Component {
    }
   }
 
-
-
   handleInput(event) {
     this.setState({inputVal: event.currentTarget.value});
   }
@@ -31,7 +29,7 @@ class Search extends React.Component {
   matches() {
     const matches = [];
     if (this.state.inputVal.length === 0) {
-      return this.names;
+      return [];
     }
 
     this.names.forEach(name => {
@@ -61,12 +59,11 @@ class Search extends React.Component {
     });
     return(
       <div>
-        <h1>Autocomplete</h1>
         <div className='auto'>
           <input
             onChange={this.handleInput}
             value={this.state.inputVal}
-            placeholder='Search...'/>
+            placeholder='Find Users...'/>
           <ul>
             <ReactCSSTransitionGroup
               transitionName='auto'
