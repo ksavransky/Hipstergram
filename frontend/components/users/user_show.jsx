@@ -28,10 +28,10 @@ class UserShow extends React.Component {
 	}
 
 	newFollow(){
-		let relationship = {
+		let relationship = {relationship: {
 			follower_id: this.props.currentUser.id,
 			followee_id: this.props.user.id,
-		};
+		}};
 		this.props.createRelationship(relationship);
 	}
 

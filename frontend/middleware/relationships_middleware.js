@@ -17,9 +17,7 @@ import {requestCurrentUser} from '../actions/session_actions.js';
 
 export default ({getState, dispatch}) => next => action => {
 
- const relationshipSuccess = data => dispatch(receiveUser(data));
-
- const destroyRelationshipSuccess = user => {
+ const relationshipSuccess = user => {
    dispatch(requestUsers());
    dispatch(requestCurrentUser());
  };
@@ -30,7 +28,7 @@ export default ({getState, dispatch}) => next => action => {
      makeRelationship(action.relationship, relationshipSuccess);
      return next(action);
    case RelationshipConstants.DESTROY_RELATIONSHIP:
-     deleteRelationship(action.relationship, destroyRelationshipSuccess);
+     deleteRelationship(action.relationship, relationshipSuccess);
      return next(action);
    default:
      next(action);
