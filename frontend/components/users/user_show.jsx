@@ -10,21 +10,29 @@ class UserShow extends React.Component {
 		this.unFollow = this.unFollow.bind(this);
   }
 
+	unFollow(){
+		let resultId;
+		this.props.currentUser.followee_relationships.forEach(obj => {
+			if(obj.followee_id === this.props.user.id &&
+				obj.follower_id === this.props.currentUser.id){
+				resultId = obj.id;
+			}
+		});
+
+		let relationship = {
+			id: resultId,
+			follower_id: this.props.currentUser.id,
+			followee_id: this.props.user.id
+		};
+		this.props.destroyRelationship(relationship);
+	}
+
 	newFollow(){
 		let relationship = {
 			follower_id: this.props.currentUser.id,
 			followee_id: this.props.user.id,
 		};
 		this.props.createRelationship(relationship);
-	}
-
-	unFollow(){
-		let relationship = {
-			follower_id: this.props.currentUser.id,
-			followee_id: this.props.user.id,
-		};
-		console.log(this.props);
-		this.props.destroyRelationship(relationship);
 	}
 
 	render(){
