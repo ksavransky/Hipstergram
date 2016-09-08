@@ -9,6 +9,14 @@ export const updateUser = function(user, success){
   });
 };
 
+export const fetchCurrentUser= function(success){
+  $.ajax({
+    method: 'GET',
+    url: `api/session`,
+    success
+  });
+};
+
 export const login = function(user, success, error) {
 	$.ajax({
 		method: 'POST',

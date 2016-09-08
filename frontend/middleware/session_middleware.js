@@ -5,7 +5,7 @@ import { receiveCurrentUser,
 
 import {hashHistory} from 'react-router';
 
-import { login, signup, logout, updateUser } from '../util/session_api_util';
+import { login, signup, logout, updateUser, fetchCurrentUser } from '../util/session_api_util';
 
 export default ({getState, dispatch}) => next => action => {
   const successCallback = user => {
@@ -14,6 +14,10 @@ export default ({getState, dispatch}) => next => action => {
   };
 
   const updateCallback = user => {
+    dispatch(receiveCurrentUser(user));
+  };
+
+  const fetchCurrentUserSuccess = user => {
     dispatch(receiveCurrentUser(user));
   };
 
@@ -35,6 +39,9 @@ export default ({getState, dispatch}) => next => action => {
       break;
     case SessionConstants.UPDATE_USER:
       updateUser(action.user, updateCallback);
+      break;
+    case SessionConstants.REQUEST_CURRENT_USER:
+      fetchCurrentUser(fetchCurrentUserSuccess);
       break;
     default:
       return next(action);

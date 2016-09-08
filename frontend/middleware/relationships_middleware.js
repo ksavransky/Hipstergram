@@ -9,7 +9,8 @@ import {
         RelationshipConstants
       } from '../actions/relationship_actions.js';
 
-import {receiveUser} from '../actions/user_actions.js';
+import {receiveUser, requestUser} from '../actions/user_actions.js';
+import {requestCurrentUser} from '../actions/session_actions.js';
 
 
 
@@ -18,7 +19,10 @@ export default ({getState, dispatch}) => next => action => {
 
  const relationshipSuccess = data => dispatch(receiveUser(data));
 
- const destroyRelationshipSuccess = relationship => dispatch(removeRelationship(relationship));
+ const destroyRelationshipSuccess = user => {
+   dispatch(requestUser(user));
+   dispatch(requestCurrentUser());
+ };
 
  const result = next(action);
  switch(action.type){
@@ -27,7 +31,6 @@ export default ({getState, dispatch}) => next => action => {
      return next(action);
    case RelationshipConstants.DESTROY_RELATIONSHIP:
      deleteRelationship(action.relationship, destroyRelationshipSuccess);
-
      return next(action);
    default:
      next(action);
