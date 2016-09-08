@@ -10,6 +10,11 @@ class PostIndex extends React.Component {
     this.props.requestUsers();
   }
 
+  componentWillReceiveProps(newProps){
+    this.props.requestPosts();
+    this.props.requestUsers();
+  }
+
   render() {
     let { posts } = this.props;
     const postKeys = Object.keys(posts);
