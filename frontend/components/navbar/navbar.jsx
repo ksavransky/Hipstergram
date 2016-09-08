@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, hashHistory, withRouter } from 'react-router';
 import Modal from 'react-modal';
-import UploadFormContainer from '../../components/upload_form/upload_form_container.js'
+import UploadFormContainer from '../../components/upload_form/upload_form_container.js';
+import Search from './search.jsx';
+
 
 
 class Navbar extends React.Component {
@@ -11,7 +13,6 @@ class Navbar extends React.Component {
     this.redirectToLoggedIn = this.redirectToLoggedIn.bind(this);
     this.redirectToProfile = this.redirectToProfile.bind(this);
     this.redirectToIndex = this.redirectToIndex.bind(this);
-
 
 
     this.state = {modalOpen: false};
@@ -83,7 +84,10 @@ class Navbar extends React.Component {
             </span>
           </span>
           <span className="navbar-search-container">
-            Search Bar
+            <Search
+              users={this.props.users}
+              requestUsers={this.props.requestUsers}
+              />
           </span>
           <span className="navbar-photo-upload" onClick={this.openModal}>
             <img src="http://res.cloudinary.com/ksavransky/image/upload/v1473186078/photoupload3_qnckd6.jpg"
