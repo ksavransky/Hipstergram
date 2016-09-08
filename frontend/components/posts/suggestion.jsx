@@ -23,6 +23,7 @@ class Suggestion extends React.Component {
 			followee_id: this.props.user.id
 		};
 		this.props.destroyRelationship(relationship);
+    this.props.requestPosts();
 	}
 
 	newFollow(){
@@ -31,6 +32,7 @@ class Suggestion extends React.Component {
 			followee_id: this.props.user.id,
 		}};
 		this.props.createRelationship(relationship);
+    this.props.requestPosts();
 	}
 
 	render(){

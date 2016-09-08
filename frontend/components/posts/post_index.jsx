@@ -10,10 +10,6 @@ class PostIndex extends React.Component {
     this.props.requestUsers();
   }
 
-  componentWillReceiveProps(newProps){
-    this.props.requestPosts();
-    this.props.requestUsers();
-  }
 
   render() {
     let { posts } = this.props;
@@ -39,6 +35,7 @@ class PostIndex extends React.Component {
               currentUser={this.props.currentUser}
               createRelationship={this.props.createRelationship}
               destroyRelationship={this.props.destroyRelationship}
+              requestPosts={this.props.requestPosts}
               />)}
           </ul>
         </div>
