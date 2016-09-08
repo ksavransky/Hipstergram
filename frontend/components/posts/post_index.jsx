@@ -3,7 +3,6 @@ import PostIndexItem from './post_index_item';
 import Suggestion from './suggestion';
 
 
-
 class PostIndex extends React.Component {
   componentDidMount() {
     this.props.requestPosts();

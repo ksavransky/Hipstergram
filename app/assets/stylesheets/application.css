@@ -169,18 +169,22 @@ position: fixed; // optional depending on what you want
   flex-direction: column;
   background-color: white;
   font-family: 'Roboto','proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   width: 570px;
   align-self: center;
   border: 1px solid #efe9e9;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .suggestion-box-label{
   display: inherit;
   background-color: inherit;
+  color: grey;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .suggestion-index-ul{
@@ -188,6 +192,83 @@ position: fixed; // optional depending on what you want
   background-color: inherit;
   font-family: inherit;
   font-size: inherit;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  flex-direction: column;
+}
+
+.suggestion-show{
+  display: flex;
+  flex-direction: row;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border-top: 1px solid #efe9e9;
+}
+
+.suggestion-user-photo-image{
+  display: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.show-user-names{
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.suggestion-show-username{
+  display: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.suggestion-user-fullname{
+  display: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.suggestion-show-follow-button{
+  display: flex;
+  font-family: inherit;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.suggestion-follow-button{
+  display: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: white;
+  color: #3683ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: 1px solid #3683ff;
+  cursor: pointer;
+  width: 50px;
 }
 
 /*post-index-item*/
@@ -704,10 +785,10 @@ position: fixed; // optional depending on what you want
   display: inherit;
   font-family: inherit;
   background-color: white;
-  color: blue;
+  color: #3683ff;
   padding: 9px;
   border-radius: 5px;
-  border: 1px solid blue;
+  border: 1px solid #3683ff;
   cursor: pointer;
 }
 
