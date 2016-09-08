@@ -3,6 +3,7 @@ import { Link, hashHistory, withRouter } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -48,27 +49,38 @@ class Search extends React.Component {
 
   selectName(event) {
     let name = event.currentTarget.innerText;
-    this.setState({inputVal: name});
+
+    let { users } = this.props;
+    const userKeys = Object.keys(users);
+    userKeys.forEach((key) => {
+      if(users[key].username === name){
+        this.setState({inputVal: ""});
+        this.props.router.replace("users/" + users[key].id);
+      }
+    });
+    this.state.inputVal = '';
   }
 
   render() {
     let results = this.matches().map((result, i) => {
       return (
-        <li key={i} onClick={this.selectName}>{result}</li>
+        <li className="search-dropdown-li" key={i} onClick={this.selectName}>{result}</li>
       );
     });
     return(
       <div>
-        <div className='auto'>
-          <input
+        <div className='search-box'>
+          <input className="search-input"
             onChange={this.handleInput}
             value={this.state.inputVal}
             placeholder='Find Users...'/>
-          <ul>
+          <ul className="search-ul">
             <ReactCSSTransitionGroup
               transitionName='auto'
               transitionEnterTimeout={500}
-              transitionLeaveTimeout={500}>
+              transitionLeaveTimeout={500}
+              className="search-drop-transition"
+              >
               {results}
             </ReactCSSTransitionGroup>
           </ul>

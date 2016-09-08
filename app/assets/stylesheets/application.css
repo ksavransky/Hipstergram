@@ -423,13 +423,6 @@ position: fixed; // optional depending on what you want
   cursor: pointer;
 }
 
-.navbar-search-container{
-  display: flex;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
-  font-size: 16px;
-  margin-left: 235px;
-}
-
 .navbar-photo-upload{
   display: flex;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
@@ -473,6 +466,60 @@ position: fixed; // optional depending on what you want
   width: auto;
   cursor: pointer;
   margin-left: 50px;
+}
+
+.navbar-search-container{
+  display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  margin-left: 245px;
+  margin-bottom: 20px;
+  width: 170px;
+}
+
+.search-dropdown-li{
+  z-index:100;
+  background-color: white;
+  border-top: 1px solid grey;
+  list-style: none;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.search-box{
+  z-index:100;
+  position:absolute;
+  background-color: white;
+  border: 1px solid grey;
+  list-style: none;
+  max-height: 300px;
+  border-radius: 3px;
+  overflow: scroll;
+}
+
+.search-drop-transition{
+  background-color: white;
+  list-style: none;
+}
+
+.search-ul{
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.search-input{
+  border: none;
+  width: 170px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-bottom: 10px;
 }
 
 /*UPLOAD FORM*/
