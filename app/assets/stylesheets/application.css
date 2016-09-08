@@ -170,6 +170,10 @@ position: fixed; // optional depending on what you want
   background-color: white;
   font-family: 'Roboto','proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
+  width: 570px;
+  align-self: center;
+  border: 1px solid #efe9e9;
+  border-radius: 4px;
 }
 
 .suggestion-box-label{
@@ -525,7 +529,8 @@ position: fixed; // optional depending on what you want
   z-index:99;
   position:absolute;
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid #efe9e9;
+  border-radius: 4px;
   list-style: none;
   max-height: 300px;
   border-radius: 3px;
