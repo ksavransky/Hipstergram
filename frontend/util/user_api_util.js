@@ -6,10 +6,10 @@ export const fetchUsers = function(success){
   });
 };
 
-export const fetchUser = function(id, success){
+export const fetchUser = function(user, success){
   $.ajax({
     method: 'GET',
-    url: `api/users/${id}`,
+    url: `api/users/${user.id}`,
     success
   });
 };

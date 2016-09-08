@@ -12,7 +12,6 @@ class UserShow extends React.Component {
 
 	unFollow(){
 		let resultId;
-		console.log(this.props);
 		this.props.currentUser.followee_relationships.forEach(obj => {
 			if(obj.followee_id === this.props.user.id &&
 				obj.follower_id === this.props.currentUser.id){

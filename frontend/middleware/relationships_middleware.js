@@ -9,7 +9,7 @@ import {
         RelationshipConstants
       } from '../actions/relationship_actions.js';
 
-import {receiveUser, requestUser} from '../actions/user_actions.js';
+import {receiveUser, requestUser, requestUsers} from '../actions/user_actions.js';
 import {requestCurrentUser} from '../actions/session_actions.js';
 
 
@@ -20,7 +20,7 @@ export default ({getState, dispatch}) => next => action => {
  const relationshipSuccess = data => dispatch(receiveUser(data));
 
  const destroyRelationshipSuccess = user => {
-   dispatch(requestUser(user));
+   dispatch(requestUsers());
    dispatch(requestCurrentUser());
  };
 

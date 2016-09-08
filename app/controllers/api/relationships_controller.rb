@@ -1,8 +1,8 @@
 class Api::RelationshipsController < ApplicationController
   def create
     @relationship = Relationship.new(relationship_params)
-    @user = User.find_by_id(@relationship.followee_id)
     if(@relationship.save)
+      @user = User.find_by_id(@relationship.followee_id)
       render "api/users/show", status: 200
       # sends jbuilder info back for specific relationship to ajax success
     else
@@ -13,7 +13,7 @@ class Api::RelationshipsController < ApplicationController
 
   def destroy
     @relationship = Relationship.find(params[:id])
-    @user = User.find_by_id(@relationship.followee_id)
+    @user = User.find(@relationship.followee_id)
     if(@relationship.destroy)
       render "api/users/show", status: 200
     else
