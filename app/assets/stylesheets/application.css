@@ -664,17 +664,17 @@ position: fixed; // optional depending on what you want
 .follow-button{
   display: inherit;
   font-family: inherit;
-  background-color: green;
-  color: white;
+  background-color: white;
+  color: blue;
   padding: 9px;
   border-radius: 5px;
-  border: 1px solid grey;
+  border: 1px solid blue;
 }
 
 .unfollow-button{
   display: inherit;
   font-family: inherit;
-  background-color: red;
+  background-color: green;
   color: white;
   padding: 9px;
   border-radius: 5px;

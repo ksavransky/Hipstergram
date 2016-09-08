@@ -53,12 +53,12 @@ class UserShow extends React.Component {
 			if (following === false){
 				followButton = <div className="follow-button"
 					onClick={this.newFollow}>
-					follow me
+					Follow 
 				</div>;
 			} else {
 				followButton = <div className="unfollow-button"
 					onClick={this.unFollow}>
-					stop following
+					Following
 				</div>;
 			}
 		}
