@@ -32,11 +32,13 @@ class Navbar extends React.Component {
           width              : "500px",
           height             : "530px",
           margin             : "auto",
-          position           : "relative",
+          marginTop          : "20px",
+          marginLeft         : "390px",
+          position           : "absolute",
           border             : '2px solid grey',
           borderRadius       : "10px",
           backgroundColor    : "#fafafa",
-          fontFamily         : "proxima-nova, Helvetica Neue, Arial"
+          fontFamily         : "proxima-nova, Helvetica Neue, Arial",
       }
     };
   }

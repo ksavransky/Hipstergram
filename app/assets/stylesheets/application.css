@@ -472,13 +472,13 @@ position: fixed; // optional depending on what you want
   display: flex;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
-  margin-left: 245px;
+  margin-left: 255px;
   margin-bottom: 20px;
   width: 170px;
 }
 
 .search-dropdown-li{
-  z-index:100;
+  z-index:99;
   background-color: white;
   border-top: 1px solid grey;
   list-style: none;
@@ -489,7 +489,7 @@ position: fixed; // optional depending on what you want
 }
 
 .search-box{
-  z-index:100;
+  z-index:99;
   position:absolute;
   background-color: white;
   border: 1px solid grey;
@@ -520,6 +520,7 @@ position: fixed; // optional depending on what you want
   margin-left: 4px;
   margin-right: 4px;
   padding-bottom: 10px;
+  outline: none;
 }
 
 /*UPLOAD FORM*/
@@ -669,6 +670,7 @@ position: fixed; // optional depending on what you want
   padding: 9px;
   border-radius: 5px;
   border: 1px solid blue;
+  cursor: pointer;
 }
 
 .unfollow-button{
@@ -679,6 +681,7 @@ position: fixed; // optional depending on what you want
   padding: 9px;
   border-radius: 5px;
   border: 1px solid grey;
+  cursor: pointer;
 }
 
 .user-show-fullname{
