@@ -164,7 +164,7 @@ position: fixed; // optional depending on what you want
 
 /*suggestion box*/
 
-.suggesion-box{
+.suggestion-box{
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -183,7 +183,7 @@ position: fixed; // optional depending on what you want
   font-size: inherit;
 }
 
-.sugesstion-index-ul{
+.suggestion-index-ul{
   display: inherit;
   background-color: inherit;
   font-family: inherit;

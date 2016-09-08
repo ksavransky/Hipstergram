@@ -1,5 +1,6 @@
 import React from 'react';
 import PostIndexItem from './post_index_item';
+import Suggestion from './suggestion';
 
 
 
@@ -12,16 +13,28 @@ class PostIndex extends React.Component {
   render() {
     let { posts } = this.props;
     const postKeys = Object.keys(posts);
+
+    let { users } = this.props;
+    const userKeys = Object.keys(users);
+
+
     return(
 
       <div className="post-index">
 
-        <div className="suggesion-box">
+        <div className="suggestion-box">
           <div className="suggestion-box-label">
             SUGGESTIONS FOR YOU
           </div>
 
-          <ul className="sugesstion-index-ul">
+          <ul className="suggestion-index-ul">
+            {userKeys.map(key => <Suggestion
+              key={key}
+              user={users[key]}
+              currentUser={this.props.currentUser}
+              createRelationship={this.props.createRelationship}
+              destroyRelationship={this.props.destroyRelationship}
+              />)}
           </ul>
         </div>
 
