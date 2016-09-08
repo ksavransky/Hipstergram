@@ -784,6 +784,7 @@ position: fixed; // optional depending on what you want
 .follow-button{
   display: inherit;
   font-family: inherit;
+  letter-spacing: 1px;
   background-color: white;
   color: #3683ff;
   padding: 9px;
@@ -795,6 +796,7 @@ position: fixed; // optional depending on what you want
 .unfollow-button{
   display: inherit;
   font-family: inherit;
+  letter-spacing: 1px;
   background-color: green;
   color: white;
   padding: 9px;
