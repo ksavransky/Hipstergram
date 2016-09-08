@@ -6,16 +6,32 @@ import Masonry from 'react-masonry-component';
 class UserShow extends React.Component {
 	constructor(props){
 		super(props);
-
+		this.newFollow = this.newFollow.bind(this);
+		this.unFollow = this.unFollow.bind(this);
   }
+
+	newFollow(){
+		let relationship = {
+			follower_id: this.props.currentUser.id,
+			followee_id: this.props.user.id,
+		};
+		this.props.createRelationship(relationship);
+	}
+
+	unFollow(){
+		let relationship = {
+			follower_id: this.props.currentUser.id,
+			followee_id: this.props.user.id,
+		};
+		console.log(this.props);
+		this.props.destroyRelationship(relationship);
+	}
 
 	render(){
     const user = this.props.user;
     const currentUser = this.props.currentUser;
     const posts = user.posts;
     const postKeys = Object.keys(posts);
-
-		console.log(currentUser);
 
 		let following = false;
 		currentUser.followees.forEach(obj => {
@@ -27,11 +43,13 @@ class UserShow extends React.Component {
 		let followButton;
 		if(currentUser.id !== user.id){
 			if (following === false){
-				followButton = <div className="follow-button">
+				followButton = <div className="follow-button"
+					onClick={this.newFollow}>
 					follow
 				</div>;
 			} else {
-				followButton = <div className="follow-button">
+				followButton = <div className="follow-button"
+					onClick={this.unFollow}>
 					unfollow
 				</div>;
 			}

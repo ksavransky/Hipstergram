@@ -19,3 +19,15 @@ json.followees user.followees.each do |followee|
       json.fullname followee.fullname
       json.prof_image_url followee.prof_image_url
 end
+
+json.follower_relationships user.follower_relationships do |follower_relationship|
+  json.id follower_relationship.id
+  json.follower_id  follower_relationship.follower_id
+  json.followee_id  follower_relationship.followee_id
+end
+
+json.followee_relationships user.followee_relationships do |followee_relationship|
+  json.id followee_relationship.id
+  json.follower_id  followee_relationship.follower_id
+  json.followee_id  followee_relationship.followee_id
+end
