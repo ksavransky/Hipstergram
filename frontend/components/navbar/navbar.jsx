@@ -33,7 +33,7 @@ class Navbar extends React.Component {
           height             : "530px",
           margin             : "auto",
           marginTop          : "20px",
-          marginLeft         : "390px",
+          marginLeft         : "373px",
           position           : "absolute",
           border             : '2px solid grey',
           borderRadius       : "10px",

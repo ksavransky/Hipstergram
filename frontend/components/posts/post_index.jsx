@@ -15,6 +15,16 @@ class PostIndex extends React.Component {
     return(
 
       <div className="post-index">
+
+        <div className="suggesion-box">
+          <div className="suggestion-box-label">
+            SUGGESTIONS FOR YOU
+          </div>
+
+          <ul className="sugesstion-index-ul">
+          </ul>
+        </div>
+
         <ul className="post-index-ul">
           {postKeys.map(key => <PostIndexItem
             key={key}

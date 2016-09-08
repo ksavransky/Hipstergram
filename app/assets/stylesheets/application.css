@@ -151,11 +151,39 @@ position: fixed; // optional depending on what you want
   justify-content: center;
   background-color: #fafafa;
   padding-top: 50px;
+  flex-direction: column;
 }
 
 .post-index-ul{
   display: flex;
   flex-direction: column-reverse;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+
+/*suggestion box*/
+
+.suggesion-box{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  font-family: 'Roboto','proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 16px;
+}
+
+.suggestion-box-label{
+  display: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.sugesstion-index-ul{
+  display: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 /*post-index-item*/
@@ -167,6 +195,7 @@ position: fixed; // optional depending on what you want
   margin: 20px;
   border-bottom: 1px solid #efe9e9;
   border-radius: 4px;
+  width: 570px;
 }
 
 .post-item-header{
@@ -177,6 +206,7 @@ position: fixed; // optional depending on what you want
   border-left: 1px solid #efe9e9;
   border-top: 1px solid #efe9e9;
   border-radius: 4px;
+  width: 570px;
 }
 
 .post-profile-image{
@@ -218,6 +248,7 @@ position: fixed; // optional depending on what you want
   border-left: 1px solid #efe9e9;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
+  width: 549px;
 }
 
 .post-item-caption-username{
@@ -254,6 +285,7 @@ position: fixed; // optional depending on what you want
   padding-left: 12px;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
+  width: 547px;
 }
 
 /*post-show-item*/
@@ -381,6 +413,7 @@ position: fixed; // optional depending on what you want
   flex-direction: row;
   background-color: white;
   padding-top: 20px;
+  width: 570px;
 }
 
 
@@ -472,8 +505,8 @@ position: fixed; // optional depending on what you want
   display: flex;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 16px;
-  margin-left: 255px;
-  margin-bottom: 20px;
+  margin-left: 235px;
+  margin-bottom: 25px;
   width: 170px;
 }
 

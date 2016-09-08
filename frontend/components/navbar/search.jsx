@@ -73,7 +73,7 @@ class Search extends React.Component {
           <input className="search-input"
             onChange={this.handleInput}
             value={this.state.inputVal}
-            placeholder='Find Users...'/>
+            placeholder='Find Hipsters...'/>
           <ul className="search-ul">
             <ReactCSSTransitionGroup
               transitionName='auto'
