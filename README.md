@@ -46,7 +46,7 @@
 ######Search for Users
   * Hipstergram features a search bar. It allows the current user to search for users, view their profiles and follow them. Enjoy!
 
-####Sample Code Snipped:
+####Sample Code Snippet:
 
 ######Hand-Rolled Users Middleware for Redux Cycles
 
