@@ -19,9 +19,8 @@ export default ({getState, dispatch}) => next => action => {
  const userSuccess = data => dispatch(receiveUser(data));
 
  const updateCallback = user => {
-   dispatch(requestUsers());
+   dispatch(receiveUser(user));
    dispatch(receiveCurrentUser(user));
-   dispatch(requestCurrentUser());
  };
 
 
