@@ -49,11 +49,11 @@
 ####Sample Code Snipped:
 
 ######Hand-Rolled Users Middleware for Redux Cycles
-  * import { fetchUsers,
-           fetchUser,
-           createUser,
-           refreshUser
-         } from '../util/user_api_util';
+  * import { fetchUsers, <br />
+           fetchUser, <br />
+           createUser, <br />
+           refreshUser <br />
+         } from '../util/user_api_util'; <br />
 
   import { requestUsers,
            receiveUser,
