@@ -36,7 +36,7 @@
   * Displays information about the current user, including number of posts, followers, and followees.
   * Displays all the posts a user has created using the Masonry gem. To see the gem in action change the window size and watch the photos in the gallery dynamically adjust positions.
 
-######Other Users Profile
+######Other Users' Profiles
   * Displays information about the user, including number of posts, followers, and followees. Can be accessed by clicking on user in post caption or via the search bar.
 
 ######Suggestions

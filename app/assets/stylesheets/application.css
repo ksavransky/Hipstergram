@@ -662,7 +662,6 @@ position: fixed; // optional depending on what you want
   justify-content: center;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
   font-size: 22px;
-
 }
 
 .upload-form{
@@ -886,4 +885,100 @@ position: fixed; // optional depending on what you want
   height: 300px;
   width: 300px;
   padding: 20px;
+}
+
+/*user profile update*/
+
+.user-update-form-container{
+  display: flex;
+  justify-content: center;
+}
+
+.user-update-form-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-update-form-welcome{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 22px;
+}
+
+.user-update-form{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.user-update-image-button{
+  display: flex;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 13px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+
+.user-update-form-image-box{
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 10px;
+  height: 370px;
+  width: 370px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.user-update-form-image{
+  display: flex;
+  border-radius: 10px;
+  border: none;
+  height: 370px;
+  width: 370px;
+}
+
+.user-update-fullname-box{
+  display: flex;
+  flex-direction: row;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.user-update-fullname-input{
+  display: flex;
+  width: 300px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.user-update-profile-text-box{
+  display: flex;
+  flex-direction: row;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.user-update-profile-text-input{
+  display: flex;
+  width: 300px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.user-update-form-button-box{
+  display: flex;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.user-update-form-button{
+  display: flex;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  outline: none;
 }
