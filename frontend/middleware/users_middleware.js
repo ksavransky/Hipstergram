@@ -23,7 +23,6 @@ export default ({getState, dispatch}) => next => action => {
    dispatch(receiveCurrentUser(user));
  };
 
-
  const result = next(action);
  switch(action.type){
    case UserConstants.REQUEST_USERS:
