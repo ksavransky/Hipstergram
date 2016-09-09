@@ -13,3 +13,12 @@ export const fetchUser = function(user, success){
     success
   });
 };
+
+export const refreshUser = function(user, success){
+  $.ajax({
+    method: 'PUT',
+    url: `api/users/${user.id}`,
+    data: user,
+    success
+  });
+};

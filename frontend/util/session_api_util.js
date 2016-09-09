@@ -1,14 +1,5 @@
 import { receiveCurrentUser, receiveErrors } from '../actions/session_actions';
 
-export const updateUser = function(user, success){
-  $.ajax({
-    method: 'PATCH',
-    url: `api/users`,
-    data: user,
-    success
-  });
-};
-
 export const fetchCurrentUser= function(success){
   $.ajax({
     method: 'GET',

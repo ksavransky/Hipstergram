@@ -807,6 +807,18 @@ position: fixed; // optional depending on what you want
   cursor: pointer;
 }
 
+.update-profile-button{
+  display: inherit;
+  font-family: inherit;
+  letter-spacing: 1px;
+  background-color: white;
+  color: green;
+  padding: 9px;
+  border-radius: 5px;
+  border: 1px solid green;
+  cursor: pointer;
+}
+
 .user-show-fullname{
   display: inherit;
   font-family: inherit;

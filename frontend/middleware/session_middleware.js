@@ -5,16 +5,12 @@ import { receiveCurrentUser,
 
 import {hashHistory} from 'react-router';
 
-import { login, signup, logout, updateUser, fetchCurrentUser } from '../util/session_api_util';
+import { login, signup, logout, fetchCurrentUser } from '../util/session_api_util';
 
 export default ({getState, dispatch}) => next => action => {
   const successCallback = user => {
     dispatch(receiveCurrentUser(user));
     hashHistory.replace('/posts');
-  };
-
-  const updateCallback = user => {
-    dispatch(receiveCurrentUser(user));
   };
 
   const fetchCurrentUserSuccess = user => {
@@ -36,9 +32,6 @@ export default ({getState, dispatch}) => next => action => {
     case SessionConstants.SIGNUP:
       signup(action.user, successCallback, errorCallback);
       return next(action);
-      break;
-    case SessionConstants.UPDATE_USER:
-      updateUser(action.user, updateCallback);
       break;
     case SessionConstants.REQUEST_CURRENT_USER:
       fetchCurrentUser(fetchCurrentUserSuccess);

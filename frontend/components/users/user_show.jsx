@@ -1,6 +1,8 @@
 import React from 'react';
 import UserPhotos from './user_photos.jsx';
 import Masonry from 'react-masonry-component';
+import Modal from 'react-modal';
+import UserProfileContainer from '../user_profile/user_profile_container.js';
 
 
 class UserShow extends React.Component {
@@ -8,7 +10,43 @@ class UserShow extends React.Component {
 		super(props);
 		this.newFollow = this.newFollow.bind(this);
 		this.unFollow = this.unFollow.bind(this);
+
+		this.state = {modalOpen: false};
+		this.closeModal = this.closeModal.bind(this);
+		this.openModal = this.openModal.bind(this);
+		this.style = {
+				overlay : {
+					position        : 'fixed',
+					top             : 0,
+					left            : 0,
+					right           : 0,
+					bottom          : 0,
+					backgroundColor : 'rgba(255, 255, 255, 0.75)',
+				},
+				content : {
+					display            : "block",
+					width              : "500px",
+					height             : "530px",
+					margin             : "auto",
+					marginTop          : "20px",
+					marginLeft         : "373px",
+					position           : "absolute",
+					border             : '2px solid grey',
+					borderRadius       : "10px",
+					backgroundColor    : "#fafafa",
+					fontFamily         : "proxima-nova, Helvetica Neue, Arial",
+			}
+		};
+
   }
+
+	closeModal(){
+		this.setState({ modalOpen: false });
+	}
+
+	openModal(){
+		this.setState({ modalOpen: true });
+	}
 
 	unFollow(){
 		let resultId;
@@ -48,19 +86,24 @@ class UserShow extends React.Component {
 			}
 		});
 
-		let followButton;
+		let changeButton;
 		if(currentUser.id !== user.id){
 			if (following === false){
-				followButton = <div className="follow-button"
+				changeButton = <div className="follow-button"
 					onClick={this.newFollow}>
-					Follow 
+					Follow
 				</div>;
 			} else {
-				followButton = <div className="unfollow-button"
+				changeButton = <div className="unfollow-button"
 					onClick={this.unFollow}>
 					Following
 				</div>;
 			}
+		} else {
+			changeButton = <div onClick={this.openModal}
+				className="update-profile-button">
+				Update Profile
+			</div>;
 		}
 
 		return (
@@ -78,7 +121,7 @@ class UserShow extends React.Component {
 				            {user.username}
 				          </div>
 				          <div className="user-show-follow-button">
-										{followButton}
+										{changeButton}
 				          </div>
 							</div>
 
@@ -116,6 +159,14 @@ class UserShow extends React.Component {
 		            post={posts[key]}
 		            />)}
 				  </Masonry>
+
+					<Modal
+						 isOpen={this.state.modalOpen}
+						 onRequestClose={this.closeModal}
+						 style={this.style}
+						 >
+							 <UserProfileContainer/>
+					 </Modal>
       </div>
 		);
 	}

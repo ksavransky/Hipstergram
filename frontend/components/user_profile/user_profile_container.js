@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
 import UserProfile from './user_profile.jsx';
-import { updateUser } from '../../actions/session_actions.js';
+import { updateUser } from '../../actions/user_actions.js';
 
 
 const mapStateToProps = state => ({
-  posts: state.posts,
   currentUser: state.session.currentUser
 });
 
