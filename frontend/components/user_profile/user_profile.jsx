@@ -20,7 +20,7 @@ class UserProfile extends React.Component {
 			this.setState({fullname: this.props.currentUser.fullname});
 		}
 		if(this.props.currentUser.profile_text !== null){
-			this.setState({fullname: this.props.currentUser.profile_text});
+			this.setState({profile_text: this.props.currentUser.profile_text});
 		}
 	}
 
