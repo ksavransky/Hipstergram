@@ -26,7 +26,7 @@ class UserShow extends React.Component {
 				content : {
 					display            : "block",
 					width              : "500px",
-					height             : "530px",
+					height             : "550px",
 					margin             : "auto",
 					marginTop          : "20px",
 					marginLeft         : "373px",
