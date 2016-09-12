@@ -198,7 +198,7 @@ input.login-input{
 }
 
 .suggestion-index-ul{
-  display: -webkit-flex margin: 0;
+  -webkit-box-flex: 0;
   background-color: inherit;
   font-family: inherit;
   font-size: inherit;
