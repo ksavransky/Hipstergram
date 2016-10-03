@@ -40,6 +40,9 @@ h1, h5 {
   font-size: 13px;
   border-radius: 5px;
   outline: none;
+  border: 1px solid grey;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .login-button-guest{
@@ -49,6 +52,10 @@ h1, h5 {
   font-size: 13px;
   border-radius: 5px;
   outline: none;
+  border: 1px solid grey;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 40px;
 }
 
 .login-sign-up-switch{
@@ -59,7 +66,8 @@ h1, h5 {
 
 .login-button-box{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  padding-left: 16px;
 }
 
 
@@ -99,6 +107,9 @@ h1, h5 {
 
 .login-input {
   margin-left: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  text-indent: 2px;
 }
 
 .login-errors{
@@ -650,7 +661,8 @@ input.login-input{
   font-size: 14px;
   margin-left: 4px;
   margin-right: 4px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   outline: none;
 }
 
@@ -681,9 +693,13 @@ input.login-input{
 }
 
 .upload-caption-input{
-  display: flex;
-  width: 300px;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+    border-radius: 5px;
+    border: 1px solid grey;
+    text-indent: 3px;
+    margin-left: 7px;
+    display: flex;
+    width: 290px;
+    font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
 
@@ -694,14 +710,20 @@ input.login-input{
 }
 
 .upload-image-button{
-  display: flex;
-  background-color: cornflowerblue;
-  color: white;
-  font-size: 13px;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  display: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: white;
+  color: #3683ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 5px;
-  padding: 5px;
-  outline: none;
+  border: 1px solid #3683ff;
+  cursor: pointer;
+  width: 135px;
+  text-transform: uppercase;
 }
 
 .upload-form-image-box{
@@ -729,14 +751,20 @@ input.login-input{
 }
 
 .upload-form-button{
-  display: flex;
-  background-color: cornflowerblue;
-  color: white;
-  font-size: 13px;
+  display: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: white;
+  color: #3683ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 5px;
-  margin-top: 5px;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
-  outline: none;
+  border: 1px solid #3683ff;
+  cursor: pointer;
+  width: 118px;
+  text-transform: uppercase;
 }
 
 
@@ -924,14 +952,20 @@ input.login-input{
 }
 
 .user-update-image-button{
-  display: flex;
-  background-color: cornflowerblue;
-  color: white;
-  font-size: 13px;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  display: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: white;
+  color: #3683ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 5px;
-  padding: 5px;
-  outline: none;
+  border: 1px solid #3683ff;
+  cursor: pointer;
+  width: 135px;
+  text-transform: uppercase;
 }
 
 .user-update-form-image-box{
@@ -957,12 +991,18 @@ input.login-input{
   display: flex;
   flex-direction: row;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+  margin-bottom: 5px;
 }
 
 .user-update-fullname-input{
-  display: flex;
-  width: 300px;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
+
+    border-radius: 5px;
+    border: 1px solid grey;
+    text-indent: 3px;
+    margin-left: 7px;
+    display: flex;
+    width: 276px;
+    font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;f;
 }
 
 .user-update-profile-text-box{
@@ -972,8 +1012,11 @@ input.login-input{
 }
 
 .user-update-profile-text-input{
+  border-radius: 5px;
+  border: 1px solid grey;
+  text-indent: 3px;
   display: flex;
-  width: 300px;
+  width: 276px;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
@@ -983,12 +1026,34 @@ input.login-input{
 }
 
 .user-update-form-button{
-  display: flex;
-  background-color: cornflowerblue;
-  color: white;
-  font-size: 13px;
+  display: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: white;
+  color: #3683ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 5px;
-  margin-top: 5px;
-  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
-  outline: none;
+  border: 1px solid #3683ff;
+  cursor: pointer;
+  width: 135px;
+  text-transform: uppercase;
+}
+
+#password-input{
+  margin-left: 12px;
+}
+
+#username-input{
+  margin-left: 10px;
+}
+
+#username-label{
+  margin-left: 11px;
+}
+
+#password-label{
+  margin-left: 11px;
 }

@@ -59,7 +59,7 @@ class UserProfile extends React.Component {
 		return (
 			<div className="user-update-form-container">
 				<form onSubmit={this.handleSubmit} className="user-update-form-box">
-					<div className="user-update-form-welcome"> Update User Profile! </div>
+					<div className="user-update-form-welcome"> Update User Profile </div>
 
 					<div className="user-update-form">
 						<label>

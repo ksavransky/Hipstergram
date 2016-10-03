@@ -127,21 +127,23 @@ class SessionForm extends React.Component {
 					<div className="welcome-div-bottom"> Share photos with the cool kids. </div>
 					{ this.renderErrors() }
 					<div className="login-form">
-						<label> Username:
+						<label id="username-label"> Username:
 							<input type="text"
 								value={this.state.username}
 								onChange={this.update("username")}
 								className="login-input"
-								placeholder="Username"/>
+								placeholder="Username"
+								id="username-input"/>
 						</label>
 
 						<br />
-						<label> Password:&nbsp;
+						<label id="password-label"> Password:
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
 								className="login-input"
-								placeholder="Password"  />
+								placeholder="Password"
+								id="password-input" />
 						</label>
 
 						<br />
