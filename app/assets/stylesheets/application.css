@@ -626,8 +626,8 @@ input.login-input{
   border-radius: 4px;
   list-style: none;
   max-height: 300px;
-  border-radius: 3px;
-  overflow: scroll;
+  /*border-radius: 3px;*/
+  /*overflow: scroll;*/
 }
 
 .search-drop-transition{

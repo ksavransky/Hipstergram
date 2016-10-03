@@ -30,8 +30,6 @@ class User < ActiveRecord::Base
 		through: :followee_relationships,
 		source: :followee
 
-
-
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness
 
