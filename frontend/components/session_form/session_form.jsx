@@ -109,7 +109,7 @@ class SessionForm extends React.Component {
 
 
 		let GuestButton = (this.props.formType === "login") ?
-		<button className="login-button-guest"
+		<button className="login-button-guest btn-shadow"
 			onClick={(e) => this.demoLogin(e, "Guest", "password")}>
 			Guest
 		</button> : "";
@@ -149,7 +149,7 @@ class SessionForm extends React.Component {
 						<br />
 						<div className="login-button-box">
 							<input type="submit"
-								className="login-button"
+								className="login-button btn-shadow"
 								value={this.submitButtonText()} />
 							{GuestButton}
 						</div>
