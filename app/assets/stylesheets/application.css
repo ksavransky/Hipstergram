@@ -781,13 +781,14 @@ input.login-input{
   display: flex;
   flex-direction: column;
   background-color: #fafafa;
+  min-width: 700px;
 }
 
 .user-show-header{
   display: flex;
   flex-direction: row;
   padding: 20px;
-  margin-left: 280px;
+  align-self: center;
   margin-top: 50px;
 }
 
@@ -804,7 +805,7 @@ input.login-input{
   display: flex;
   flex-direction: column;
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
-  width: 600px
+  width: auto;
 }
 
 .user-show-namebutton{
