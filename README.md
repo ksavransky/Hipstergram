@@ -1,6 +1,6 @@
 # Hipstergram
 
-###[Link to Hipstergram](http://www.hipstergram.io)
+###[Link to Hipstergram](https://thehipstergram.herokuapp.com)
 
 *Welcome to Hipstergram! Hipstergram is a photo sharing web application inspired by Instagram, but tailored to Hipster sensibilities. It was built using Ruby on Rails and React.js/Redux.*
 
