@@ -40,9 +40,7 @@ class UploadForm extends React.Component {
     this.setState({caption: ""});
 	}
 
-
 	render() {
-
 		let submitButton;
 		let caption;
 
