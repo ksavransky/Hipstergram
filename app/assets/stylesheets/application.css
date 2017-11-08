@@ -68,6 +68,8 @@ h1, h5 {
   display: flex;
   justify-content: center;
   padding-left: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 

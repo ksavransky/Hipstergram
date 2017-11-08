@@ -145,15 +145,12 @@ class SessionForm extends React.Component {
 								placeholder="Password"
 								id="password-input" />
 						</label>
-
-						<br />
 						<div className="login-button-box">
 							<input type="submit"
 								className="login-button btn-shadow"
 								value={this.submitButtonText()} />
 							{GuestButton}
 						</div>
-						<br />
 						<div className="signup-login-link">
 							{ this.navLink() }
 						</div>
